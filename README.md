@@ -1,5 +1,13 @@
 # Projeto Integrador - Grupo 8
 
+## Integrantes:
+
+### - Gabriel Henrique de Souza Ferraz
+### - Gabriel Timóteo dos Santos
+### - Gabriel Henrique de Souza Ferraz
+### - Hugo Wagner da Silva Gomes dos Santos
+### - Victor Citro Velozo
+
 # Tema: Assistente Virtual para Idosos
 
 ## Descrição: Aplicação voltada para facilitar o uso de smartphones para usuários da terceira idade.
