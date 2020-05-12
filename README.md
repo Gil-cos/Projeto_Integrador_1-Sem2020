@@ -4,7 +4,7 @@
 
 ### - Gabriel Henrique de Souza Ferraz
 ### - Gabriel Timóteo dos Santos
-### - Gabriel Henrique de Souza Ferraz
+### - Gabriel Soares Gonçalves
 ### - Hugo Wagner da Silva Gomes dos Santos
 ### - Victor Citro Velozo
 
