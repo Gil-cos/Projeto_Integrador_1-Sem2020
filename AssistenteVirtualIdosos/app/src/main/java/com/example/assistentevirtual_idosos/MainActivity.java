@@ -3,15 +3,19 @@ package com.example.assistentevirtual_idosos;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.speech.RecognizerIntent;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    private TextToSpeech tts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,34 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    @Override
+    public void onDestroy(){
+        if(tts != null){
+            tts.stop();
+            tts.shutdown();
+        }
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode,
+                                    int resultCode,
+                                    Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == 10){
+
+            if (resultCode == RESULT_OK && null != data) {
+
+                ArrayList<String> result =
+                        data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+
+                String speech = result.get(0);
+                
+            }
+        }
+    }
+
     private void catchSpeech() {
 
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
