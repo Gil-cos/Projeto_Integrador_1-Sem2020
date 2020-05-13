@@ -2,6 +2,7 @@ package com.example.assistentevirtual_idosos;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
@@ -52,9 +53,25 @@ public class MainActivity extends AppCompatActivity {
                         data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
                 String speech = result.get(0);
+                processMachineLearning(speech);
                 
             }
         }
+    }
+    private void processMachineLearning(String speech) {
+
+        if(speech.toUpperCase().contains("PESQUISAR")){
+            openURL();
+        }
+
+
+    }
+
+    private void openURL() {
+        String URL = "http://www.google.com";
+
+        Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(URL));
+        startActivity(intent);
     }
 
     private void catchSpeech() {
