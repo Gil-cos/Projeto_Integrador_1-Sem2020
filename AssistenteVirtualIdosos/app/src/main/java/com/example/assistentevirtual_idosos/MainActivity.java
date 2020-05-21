@@ -1,5 +1,6 @@
 package com.example.assistentevirtual_idosos;
 
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
@@ -16,7 +17,7 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextToSpeech tts;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +33,6 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     public void onDestroy(){
-        if(tts != null){
-            tts.stop();
-            tts.shutdown();
-        }
         super.onDestroy();
     }
 
@@ -54,17 +51,19 @@ public class MainActivity extends AppCompatActivity {
 
                 String speech = result.get(0);
                 processMachineLearning(speech);
-                
+
             }
         }
     }
     private void processMachineLearning(String speech) {
 
-        if(speech.toUpperCase().contains("PESQUISAR")){
+        if(speech.toUpperCase().equals("PESQUISAR")){
             openURL();
         }
 
-
+        else{
+            Toast.makeText(this, "Funcionalidade não existente, veja a lista de funções no ícone abaixo do microfone.", Toast.LENGTH_LONG).show();
+        }
     }
 
     private void openURL() {
