@@ -7,12 +7,14 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.net.wifi.WifiManager;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -24,6 +26,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     private TextToSpeech tts;
+    private WifiManager wifi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +38,10 @@ public class MainActivity extends AppCompatActivity {
                 catchSpeech();
             }
         });
+        wifi = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
     }
+
     @Override
     public void onDestroy(){
         if(tts != null){
@@ -82,6 +87,18 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        if(speech.toUpperCase().equals("ATIVAR WI-FI")){
+
+            enableWifi();
+
+        }
+
+        if (speech.toUpperCase().equals("DESATIVAR WI-FI")){
+
+            disableWifi();
+
+        }
+
     }
 
     private void openURL() {
@@ -106,6 +123,20 @@ public class MainActivity extends AppCompatActivity {
         BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
         btAdapter.disable();
         Toast.makeText(getApplicationContext(), "Bluetooth desativado", Toast.LENGTH_LONG).show();
+
+    }
+
+    private void enableWifi(){
+        //Comando para ativar o wi-fi
+        wifi.setWifiEnabled(true);
+        Toast.makeText(getApplicationContext(), "Wi-fi ativado", Toast.LENGTH_LONG).show();
+
+    }
+
+    private void disableWifi(){
+        //Comando para desativar o wi-fi
+        wifi.setWifiEnabled(false);
+        Toast.makeText(getApplicationContext(), "Wi-fi desativado", Toast.LENGTH_LONG).show();
 
     }
 
