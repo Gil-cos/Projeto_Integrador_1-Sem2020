@@ -1,7 +1,11 @@
 package com.example.assistentevirtual_idosos;
 
+import android.bluetooth.BluetoothAdapter;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
@@ -10,6 +14,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -60,10 +67,20 @@ public class MainActivity extends AppCompatActivity {
     }
     private void processMachineLearning(String speech) {
 
-        if(speech.toUpperCase().contains("PESQUISAR")){
+        if(speech.toUpperCase().equals("PESQUISAR")){
             openURL();
         }
 
+        if (speech.toUpperCase().equals("ATIVAR BLUETOOTH")){
+
+            enableBluetooth();
+        }
+
+        if (speech.toUpperCase().equals("DESATIVAR BLUETOOTH")){
+
+            disableBluetooth();
+
+        }
 
     }
 
@@ -72,6 +89,24 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(URL));
         startActivity(intent);
+    }
+
+
+
+    private void enableBluetooth() {
+        // Comando para ativar o bluetooth
+        BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
+        btAdapter.enable();
+        Toast.makeText(getApplicationContext(), "Bluetooth ativado", Toast.LENGTH_LONG).show();
+
+    }
+
+    private void disableBluetooth() {
+        //Comando para desativar o bluetooth
+        BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
+        btAdapter.disable();
+        Toast.makeText(getApplicationContext(), "Bluetooth desativado", Toast.LENGTH_LONG).show();
+
     }
 
     private void catchSpeech() {
