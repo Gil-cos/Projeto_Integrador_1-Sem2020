@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             openURL();
         }
 
-        if (speech.toUpperCase().contains("SOCORRO")) {
+        if (speech.toUpperCase().contains("AJUDA")) {
             callSOS();
         }
 
@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 ActivityCompat.requestPermissions(MainActivity.this, new String[] {Manifest.permission.CALL_PHONE}, 1);
                 return;
             }
+            Toast.makeText(this,"Chamando a Emergência",Toast.LENGTH_LONG).show();
             startActivity(intent);
         }
     }
