@@ -63,10 +63,12 @@ public class MainActivity extends AppCompatActivity {
 
         if(speech.toUpperCase().equals("PESQUISAR")){
             openURL();
+            return;
         }
 
-        if (speech.toUpperCase().contains("AJUDA")) {
+        if (speech.toUpperCase().equals("AJUDA")) {
             callSOS();
+            return;
         }
 
         else{
@@ -76,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void callSOS() {
+        //Método para ligar para Emergência
         Intent intent = new Intent(Intent.ACTION_CALL);
         intent.setData(Uri.parse("tel:" + phoneNumber));
         if (intent.resolveActivity(getPackageManager()) != null) {
@@ -89,9 +92,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openURL(){
+        //Método para abrir o navegador
         String URL = "http://www.google.com";
 
         Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(URL));
+        Toast.makeText(this,"Abrindo Navegador",Toast.LENGTH_LONG).show();
         startActivity(intent);
     }
 
