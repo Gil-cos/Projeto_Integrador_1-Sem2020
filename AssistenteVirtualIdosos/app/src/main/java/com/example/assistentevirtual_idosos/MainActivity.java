@@ -1,5 +1,6 @@
 package com.example.assistentevirtual_idosos;
 
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
@@ -8,8 +9,10 @@ import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -18,18 +21,37 @@ public class MainActivity extends AppCompatActivity {
 
     private TextToSpeech tts;
 
+    public MainActivity() {
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView (R.layout.activity_main);
-        findViewById(R.id.microphone).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.microphone).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 catchSpeech();
+
             }
         });
 
+         findViewById(R.id.icon3).setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent intent = new Intent(getApplicationContext(), list_view.class);
+                 startActivity(intent);
+             }
+         });
+
+
+
+
     }
+
+
+
+
     @Override
     public void onDestroy(){
         if(tts != null){
@@ -58,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+
     private void processMachineLearning(String speech) {
 
         if(speech.toUpperCase().contains("PESQUISAR")){
@@ -66,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
 
     private void openURL() {
         String URL = "http://www.google.com";
@@ -87,4 +113,5 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,"Reconhecimento de voz não suportado",Toast.LENGTH_SHORT).show();
         }
     }
+
 }
