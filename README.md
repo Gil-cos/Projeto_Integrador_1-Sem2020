@@ -13,9 +13,12 @@
 
 ## Descrição: Aplicação Mobile voltada para facilitar o uso de smartphones para usuários da terceira idade.
 
+## Ferramentas Utilizadas: A aplicação está sendo desenvolvida através de um Ambiente de desenvolvimento integrado (IDE) chamada Android Studio, no qual seu frontend está em JAVA e seu backend em XML.
+
 ## Funcionamento do Aplicativo: Após o aplicativo ser instalado pelo usuário em seu smartphone, ao clicar em seu ícone será aberta a tela inicial contendo um microfone como botão e um ícone de visualização de lista. Ao clicar no microfone, será gerado a tela de reconhecimento de voz da Google que irá captar o comando falado pelo usuário, acionando uma das funcionalidades. O ícone de visualização de lista, quando clicado, tem a função de mostrar as funcionalidades disponíveis para o usuário por meio de uma nova tela no aplicativo.
 
-# Funcionalidades: 
+# Sprint 2: 
+## - [Vídeo Sprint](https://www.youtube.com/watch?v=Q-cQ-0FwXa8&feature=youtu.be)
 
 ## 1. Ativar/desativar zoom na tela
 
@@ -49,5 +52,6 @@
 ### Ao falar o comando "ligar bluetooth", o Bluetooth do celular será ativado. 
 ### Ao falar o comando "desligar bluetooth", o Bluetooth do celular será desativado.
 
-# Entregas:
-## - [Entrega 02](https://github.com/Gil-cos/Projeto_Integrador_1-Sem2020/tree/master/Entregas%20PI%20-%20Grupo%208/Entrega%2002)
+# Sprint 3:
+## - [Vídeo Sprint](https://www.youtube.com/watch?v=Q-cQ-0FwXa8&feature=youtu.be)
+
