@@ -48,3 +48,6 @@
 ### Ao falar o comando "desligar internet", o Wi-Fi e Dados Móveis do celular será desativado.
 ### Ao falar o comando "ligar bluetooth", o Bluetooth do celular será ativado. 
 ### Ao falar o comando "desligar bluetooth", o Bluetooth do celular será desativado.
+
+# Entregas:
+## - [Entrega 02](https://github.com/Gil-cos/Projeto_Integrador_1-Sem2020/tree/master/Entregas%20PI%20-%20Grupo%208/Entrega%2002)

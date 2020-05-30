@@ -1,18 +1,19 @@
 package com.example.assistentevirtual_idosos;
 
 import android.Manifest;
+import android.bluetooth.BluetoothAdapter;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.net.wifi.WifiManager;
 import android.speech.RecognizerIntent;
-import android.speech.tts.TextToSpeech;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -20,18 +21,21 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     String phoneNumber = "192";
+    private WifiManager wifi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        wifi = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+
         findViewById(R.id.microphone).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 catchSpeech();
             }
         });
-
     }
 
     @Override
@@ -71,6 +75,30 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        if (speech.toUpperCase().equals("ATIVAR BLUETOOTH")){
+
+            enableBluetooth();
+            return;
+        }
+
+        if (speech.toUpperCase().equals("DESATIVAR BLUETOOTH")){
+
+            disableBluetooth();
+            return;
+        }
+
+        if(speech.toUpperCase().equals("ATIVAR WI-FI")){
+
+            enableWifi();
+            return;
+        }
+
+        if (speech.toUpperCase().equals("DESATIVAR WI-FI")) {
+
+            disableWifi();
+            return;
+        }
+
         else{
             Toast.makeText(this, "Funcionalidade não existente, veja a lista de funções no ícone abaixo do microfone.", Toast.LENGTH_LONG).show();
         }
@@ -91,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void openURL(){
+    private void openURL() {
         //Método para abrir o navegador
         String URL = "http://www.google.com";
 
@@ -100,7 +128,37 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void catchSpeech(){
+    private void enableBluetooth() {
+        // Comando para ativar o bluetooth
+        BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
+        btAdapter.enable();
+        Toast.makeText(getApplicationContext(), "Bluetooth ativado", Toast.LENGTH_LONG).show();
+
+    }
+
+    private void disableBluetooth() {
+        //Comando para desativar o bluetooth
+        BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
+        btAdapter.disable();
+        Toast.makeText(getApplicationContext(), "Bluetooth desativado", Toast.LENGTH_LONG).show();
+
+    }
+
+    private void enableWifi(){
+        //Comando para ativar o wi-fi
+        wifi.setWifiEnabled(true);
+        Toast.makeText(getApplicationContext(), "Wi-fi ativado", Toast.LENGTH_LONG).show();
+
+    }
+
+    private void disableWifi(){
+        //Comando para desativar o wi-fi
+        wifi.setWifiEnabled(false);
+        Toast.makeText(getApplicationContext(), "Wi-fi desativado", Toast.LENGTH_LONG).show();
+
+    }
+
+    private void catchSpeech() {
 
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
