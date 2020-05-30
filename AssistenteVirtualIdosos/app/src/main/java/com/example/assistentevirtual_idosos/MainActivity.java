@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
+import android.provider.MediaStore;
 import android.speech.RecognizerIntent;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +17,6 @@ import android.view.View;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Locale;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onDestroy(){
+    public void onDestroy() {
         super.onDestroy();
     }
 
@@ -65,13 +65,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void processMachineLearning(String speech) {
 
-        if(speech.toUpperCase().equals("PESQUISAR")){
+        if (speech.toUpperCase().equals("PESQUISAR")) {
             openURL();
             return;
         }
 
         if (speech.toUpperCase().equals("AJUDA")) {
             callSOS();
+            return;
+        }
+
+        if (speech.toUpperCase().equals("TIRAR FOTO")) {
+            Cameraopen();
             return;
         }
 
@@ -87,13 +92,13 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        if(speech.toUpperCase().equals("ATIVAR WI-FI")){
+        if(speech.toUpperCase().equals("ATIVAR INTERNET")){
 
             enableWifi();
             return;
         }
 
-        if (speech.toUpperCase().equals("DESATIVAR WI-FI")) {
+        if (speech.toUpperCase().equals("DESATIVAR INTERNET")) {
 
             disableWifi();
             return;
@@ -111,11 +116,19 @@ public class MainActivity extends AppCompatActivity {
         intent.setData(Uri.parse("tel:" + phoneNumber));
         if (intent.resolveActivity(getPackageManager()) != null) {
             if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(MainActivity.this, new String[] {Manifest.permission.CALL_PHONE}, 1);
+                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CALL_PHONE}, 1);
                 return;
             }
-            Toast.makeText(this,"Chamando a Emergência",Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Chamando a Emergência", Toast.LENGTH_LONG).show();
             startActivity(intent);
+        }
+    }
+
+    private void Cameraopen(){
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            Toast.makeText(this, "Abrindo Câmera", Toast.LENGTH_LONG).show();
+            startActivityForResult(takePictureIntent, 1);
         }
     }
 
@@ -163,12 +176,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.US);
-        intent.putExtra(RecognizerIntent.EXTRA_PROMPT,"Fale naturalmente...");
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Fale naturalmente...");
 
-        try{
+        try {
             startActivityForResult(intent, 10);
-        }catch (ActivityNotFoundException a){
-            Toast.makeText(this,"Reconhecimento de voz não suportado",Toast.LENGTH_SHORT).show();
+        } catch (ActivityNotFoundException a) {
+            Toast.makeText(this, "Reconhecimento de voz não suportado", Toast.LENGTH_SHORT).show();
         }
     }
 }
