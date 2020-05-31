@@ -30,8 +30,8 @@
 
 ## 3. Configurar Conectividade
 
-### Descrição: Ao falar o comando "ligar internet", o Wi-Fi e Dados Móveis do celular será ativado. 
-### Ao falar o comando "desligar internet", o Wi-Fi e Dados Móveis do celular será desativado.
+### Descrição: Ao falar o comando "ligar internet", o Wi-Fi do celular será ativado. 
+### Ao falar o comando "desligar internet", o Wi-Fi do celular será desativado.
 ### Ao falar o comando "ligar bluetooth", o Bluetooth do celular será ativado. 
 ### Ao falar o comando "desligar bluetooth", o Bluetooth do celular será desativado.
 
