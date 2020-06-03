@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Assistente Virtual - Idosos</string>
+    
+    <string name="red"> RED </string>
+    <string name="blue"> BLUE </string>
+    <string name="green"> GREEN </string>
 </resources>
