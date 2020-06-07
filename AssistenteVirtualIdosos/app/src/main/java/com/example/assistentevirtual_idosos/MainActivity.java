@@ -23,9 +23,6 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     String phoneNumber = "192";
-    String message = "Alarme para tomar o remédio";
-    String hour = "4:20";
-    String array_hour[] = hour.split(":");
     private WifiManager wifi;
 
     @Override
@@ -111,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(speech.toUpperCase().equals("ADICIONAR ALARME")){
 
-            openAlarm(message,array_hour);
+            openAlarm();
             return;
 
         }
@@ -183,25 +180,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void openAlarm(String message, String array_hour[]) {
+    private void openAlarm() {
+        Intent intent = new Intent(this, Alarme.class);
+        startActivity(intent);
 
-                 ArrayList <Integer> Days = new ArrayList<>();
-                 Days.add(Calendar.MONDAY);
-                 Days.add(Calendar.TUESDAY);
-                 Days.add(Calendar.WEDNESDAY);
-                 Days.add(Calendar.THURSDAY);
-                 Days.add(Calendar.FRIDAY);
-                 Days.add(Calendar.SATURDAY);
-                 Days.add(Calendar.SUNDAY);
-
-        Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM)
-                .putExtra(AlarmClock.EXTRA_MESSAGE, message)
-                .putExtra(AlarmClock.EXTRA_HOUR, Integer.parseInt(array_hour[0]))
-                .putExtra(AlarmClock.EXTRA_MINUTES,Integer.parseInt(array_hour[1]))
-                .putExtra(AlarmClock.EXTRA_DAYS, Days);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        }
     }
     private void catchSpeech() {
 

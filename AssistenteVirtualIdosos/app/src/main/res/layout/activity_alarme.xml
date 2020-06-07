@@ -14,7 +14,8 @@
         android:text="Quinta-Feira"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="432dp" />
+        tools:layout_editor_absoluteY="432dp"
+        />
 
     <CheckBox
         android:id="@+id/quarta"
@@ -23,7 +24,8 @@
         android:text="Quarta-Feira"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="358dp" />
+        tools:layout_editor_absoluteY="358dp"
+        />
 
     <CheckBox
         android:id="@+id/terça"
@@ -32,7 +34,8 @@
         android:text="Terça-Feira"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="283dp" />
+        tools:layout_editor_absoluteY="283dp"
+        />
 
     <CheckBox
         android:id="@+id/segunda"
@@ -41,7 +44,8 @@
         android:text="Segunda-Feira"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="209dp" />
+        tools:layout_editor_absoluteY="209dp"
+         />
 
     <ImageView
         android:id="@+id/imageView"
@@ -52,7 +56,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.060000002"
-        app:srcCompat="@drawable/ic_microphone" />
+        app:srcCompat="@drawable/ic_microphone"
+        />
 
     <CheckBox
         android:id="@+id/sexta"
@@ -61,7 +66,8 @@
         android:text="Sexta-Feira"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="507dp" />
+        tools:layout_editor_absoluteY="507dp"
+         />
 
     <CheckBox
         android:id="@+id/sabado"
@@ -70,7 +76,8 @@
         android:text="Sábado"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="581dp" />
+        tools:layout_editor_absoluteY="581dp"
+         />
 
     <CheckBox
         android:id="@+id/domingo"
@@ -79,7 +86,8 @@
         android:text="Domingo"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="656dp" />
+        tools:layout_editor_absoluteY="656dp"
+         />
 
 
 </android.support.constraint.ConstraintLayout>
