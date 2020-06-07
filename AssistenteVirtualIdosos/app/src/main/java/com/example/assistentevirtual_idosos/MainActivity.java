@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         wifi = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
-        findViewById(R.id.microphone).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.microphonee).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 catchSpeech();

@@ -4,6 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Alarme">
+    android:background="@drawable/background">
+
+
+    <CheckBox
+        android:id="@+id/quinta"
+        android:layout_width="409dp"
+        android:layout_height="74dp"
+        android:text="Quinta-Feira"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="432dp" />
+
+    <CheckBox
+        android:id="@+id/quarta"
+        android:layout_width="409dp"
+        android:layout_height="73dp"
+        android:text="Quarta-Feira"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="358dp" />
+
+    <CheckBox
+        android:id="@+id/terça"
+        android:layout_width="409dp"
+        android:layout_height="74dp"
+        android:text="Terça-Feira"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="283dp" />
+
+    <CheckBox
+        android:id="@+id/segunda"
+        android:layout_width="409dp"
+        android:layout_height="73dp"
+        android:text="Segunda-Feira"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="209dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="157dp"
+        android:layout_height="174dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002"
+        app:srcCompat="@drawable/ic_microphone" />
+
+    <CheckBox
+        android:id="@+id/sexta"
+        android:layout_width="409dp"
+        android:layout_height="73dp"
+        android:text="Sexta-Feira"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="507dp" />
+
+    <CheckBox
+        android:id="@+id/sabado"
+        android:layout_width="409dp"
+        android:layout_height="74dp"
+        android:text="Sábado"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="581dp" />
+
+    <CheckBox
+        android:id="@+id/domingo"
+        android:layout_width="409dp"
+        android:layout_height="74dp"
+        android:text="Domingo"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="656dp" />
+
 
 </android.support.constraint.ConstraintLayout>
+
+
+
+
