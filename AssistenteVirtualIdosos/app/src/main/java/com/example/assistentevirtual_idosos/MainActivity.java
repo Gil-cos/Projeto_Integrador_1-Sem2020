@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
+import android.provider.AlarmClock;
 import android.provider.MediaStore;
 import android.speech.RecognizerIntent;
 import android.support.v4.app.ActivityCompat;
@@ -16,11 +17,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
     String phoneNumber = "192";
+    String message = "Alarme para tomar o remédio";
+    String hour = "4:20";
+    String array_hour[] = hour.split(":");
     private WifiManager wifi;
 
     @Override
@@ -104,6 +109,13 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        if(speech.toUpperCase().equals("ADICIONAR ALARME")){
+
+            openAlarm(message,array_hour);
+            return;
+
+        }
+
         else{
             Toast.makeText(this, "Funcionalidade não existente, veja a lista de funções no ícone abaixo do microfone.", Toast.LENGTH_LONG).show();
         }
@@ -171,6 +183,26 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void openAlarm(String message, String array_hour[]) {
+
+                 ArrayList <Integer> Days = new ArrayList<>();
+                 Days.add(Calendar.MONDAY);
+                 Days.add(Calendar.TUESDAY);
+                 Days.add(Calendar.WEDNESDAY);
+                 Days.add(Calendar.THURSDAY);
+                 Days.add(Calendar.FRIDAY);
+                 Days.add(Calendar.SATURDAY);
+                 Days.add(Calendar.SUNDAY);
+
+        Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM)
+                .putExtra(AlarmClock.EXTRA_MESSAGE, message)
+                .putExtra(AlarmClock.EXTRA_HOUR, Integer.parseInt(array_hour[0]))
+                .putExtra(AlarmClock.EXTRA_MINUTES,Integer.parseInt(array_hour[1]))
+                .putExtra(AlarmClock.EXTRA_DAYS, Days);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
     private void catchSpeech() {
 
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
