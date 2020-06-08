@@ -12,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class Alarme extends AppCompatActivity {
@@ -39,6 +40,36 @@ public class Alarme extends AppCompatActivity {
         sabado = findViewById(R.id.sabado);
         domingo = findViewById(R.id.domingo);
     }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode,
+                                    int resultCode,
+                                    Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 10) {
+
+            if (resultCode == RESULT_OK && null != data) {
+
+                ArrayList<String> result =
+                        data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+
+                String speech = result.get(0);
+                processMachineLearning(speech);
+
+            }
+        }
+    }
+
+    private void processMachineLearning(String speech) {
+
+
+    }
+
 
     public void checkbox () {
         boolean teste = segunda.isChecked();
