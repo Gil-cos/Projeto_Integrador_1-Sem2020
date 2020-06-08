@@ -29,6 +29,7 @@ public class Alarme extends AppCompatActivity {
 
 
     }
+
     public void checkbox () {
         boolean teste = segunda.isChecked();
 
