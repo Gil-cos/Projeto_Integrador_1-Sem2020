@@ -25,20 +25,12 @@ public class Alarme extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarme);
 
-        findViewById(R.id.microphonee).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.imageView).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 catchSpeech();
             }
         });
-
-        segunda = findViewById(R.id.segunda);
-        terça = findViewById(R.id.terça);
-        quarta = findViewById(R.id.quarta);
-        quinta = findViewById(R.id.quinta);
-        sexta = findViewById(R.id.sexta);
-        sabado = findViewById(R.id.sabado);
-        domingo = findViewById(R.id.domingo);
     }
     @Override
     public void onDestroy() {
@@ -68,11 +60,6 @@ public class Alarme extends AppCompatActivity {
     private void processMachineLearning(String speech) {
 
 
-    }
-
-
-    public void checkbox () {
-        boolean teste = segunda.isChecked();
     }
 
     private void catchSpeech() {
