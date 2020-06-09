@@ -60,18 +60,10 @@ public class Alarme extends AppCompatActivity {
 
     private void processMachineLearning(String speech) {
 
-
     }
 
-<<<<<<< HEAD
-=======
 
 
-    public void checkbox () {
-        boolean teste = segunda.isChecked();
-    }
-
->>>>>>> 433103a417a212719a5777f37d2225c7f5f72035
     private void catchSpeech() {
 
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
