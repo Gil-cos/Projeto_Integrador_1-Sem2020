@@ -8,6 +8,8 @@
     <string name="sexta_feira">Sexta-Feira</string>
     <string name="s_bado">Sábado</string>
     <string name="domingo">Domingo</string>
+    <string name="alarme">ALARME</string>
+    <string name="aqui_ser_adicionado_seu_t_tulo">Aqui será adicionado seu título</string>
 
 
 </resources>

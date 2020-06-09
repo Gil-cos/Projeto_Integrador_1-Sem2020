@@ -71,24 +71,22 @@ public class Alarme extends AppCompatActivity {
 
     private void processMachineLearning(String speech) {
 
+
         if (speech.toUpperCase().contains("TITULO")) {
 
 
-
         }
 
-        if (speech.toUpperCase().contains("HORÁRIO")){
-
-
+        if (speech.toUpperCase().contains("HORÁRIO")) {
 
 
         }
 
-        if (speech.toUpperCase().contains("DIAS DA SEMANA ")){
-
+        if (speech.toUpperCase().contains("DIAS DA SEMANA ")) {
 
 
         }
+
 
 
     }
