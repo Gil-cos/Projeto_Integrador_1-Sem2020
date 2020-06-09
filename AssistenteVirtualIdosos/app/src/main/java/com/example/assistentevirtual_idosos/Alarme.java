@@ -41,9 +41,8 @@ public class Alarme extends AppCompatActivity {
         map.put("sexta-feira", "FRIDAY");
         map.put("sábado", "SATURDAY");
         map.put("domingo", "SUNDAY");
-        
-
     }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
