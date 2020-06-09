@@ -42,25 +42,26 @@
 
     <CheckBox
         android:id="@+id/segunda"
-        android:layout_width="409dp"
-        android:layout_height="49dp"
+        android:layout_width="405dp"
+        android:layout_height="86dp"
         android:text="@string/segunda_feira"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/terça"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/microphone"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="1dp" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/microphone"
         android:layout_width="157dp"
         android:layout_height="174dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.586"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.060000002"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_microphone"
         tools:ignore="VectorDrawableCompat" />
 
