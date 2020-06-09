@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     private void processMachineLearning(String speech) {
 
         if (speech.toUpperCase().equals("PESQUISAR")) {
-            openURL();
+            searchGoogle();
             return;
         }
 
@@ -132,13 +132,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void openURL() {
-        //Método para abrir o navegador
-        String URL = "http://www.google.com";
-
-        Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(URL));
-        Toast.makeText(this,"Abrindo Navegador",Toast.LENGTH_LONG).show();
+    private void searchGoogle() {
+        //Método para realizar pesquisas
+        Intent intent = new Intent(RecognizerIntent.ACTION_WEB_SEARCH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speak please");
         startActivity(intent);
+        //Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+        //intent.putExtra(SearchManager.QUERY, query);
+        //if (intent.resolveActivity(getPackageManager()) != null) {
+           // startActivity(intent);
+        //}
     }
 
     private void enableBluetooth() {
