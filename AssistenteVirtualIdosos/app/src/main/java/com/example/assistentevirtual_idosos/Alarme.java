@@ -11,26 +11,38 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 public class Alarme extends AppCompatActivity {
-
-    private CheckBox segunda,terça, quarta, quinta, sexta, sabado, domingo;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarme);
+        findViewById(R.id.microphone).setOnClickListener(new View.OnClickListener() {
 
-        findViewById(R.id.imageView).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 catchSpeech();
             }
         });
+
+    }
+
+    public static void main(String[] args){
+        Map<String,String> map = new HashMap<>();
+        map.put("segunda-feira", "MONDAY");
+        map.put("terça-feira", "TUESDAY");
+        map.put("quarta-feira", "WEDNESDAY");
+        map.put("quinta-feira", "THURSDAY");
+        map.put("sexta-feira", "FRIDAY");
+        map.put("sábado", "SATURDAY");
+        map.put("domingo", "SUNDAY");
+        
+
     }
     @Override
     public void onDestroy() {
@@ -60,7 +72,24 @@ public class Alarme extends AppCompatActivity {
 
     private void processMachineLearning(String speech) {
 
+
+        if (speech.toUpperCase().contains("TITULO")) {
+
+
+        }
+
+        if (speech.toUpperCase().contains("HORÁRIO")) {
+
+
+        }
+
+        if (speech.toUpperCase().contains("DIAS DA SEMANA ")) {
+
+
+        }
+
     }
+
 
 
 
