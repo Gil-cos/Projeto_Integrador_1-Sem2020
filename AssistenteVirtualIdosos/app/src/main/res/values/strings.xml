@@ -4,4 +4,5 @@
     <string name="red"> RED </string>
     <string name="blue"> BLUE </string>
     <string name="green"> GREEN </string>
+    <string name="yellow"> YELLOW </string>
 </resources>

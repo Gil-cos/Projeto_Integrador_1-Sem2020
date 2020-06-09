@@ -4,7 +4,8 @@ public enum ModelObject {
     //Definir cores:
     RED(R.string.red, R.layout.view_red),
     BLUE(R.string.blue, R.layout.view_blue),
-    GREEN(R.string.green, R.layout.view_green);
+    GREEN(R.string.green, R.layout.view_green),
+    YELLOW(R.string.yellow,R.layout.view_yellow);
 
     private int mTitleResId;
     private int mLayoutResId;
