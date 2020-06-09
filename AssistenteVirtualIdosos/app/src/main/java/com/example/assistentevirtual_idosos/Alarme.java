@@ -88,9 +88,9 @@ public class Alarme extends AppCompatActivity {
 
         }
 
+
+
     }
-
-
 
 
     private void catchSpeech() {
