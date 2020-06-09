@@ -22,13 +22,14 @@ public class Alarme extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarme);
-
         findViewById(R.id.microphone).setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 catchSpeech();
             }
         });
+
     }
 
     public static void main(String[] args){
@@ -41,6 +42,7 @@ public class Alarme extends AppCompatActivity {
         map.put("sábado", "SATURDAY");
         map.put("domingo", "SUNDAY");
         
+
     }
     @Override
     public void onDestroy() {
@@ -80,6 +82,7 @@ public class Alarme extends AppCompatActivity {
 
 
 
+
         }
 
         if (speech.toUpperCase().contains("DIAS DA SEMANA ")){
@@ -90,8 +93,6 @@ public class Alarme extends AppCompatActivity {
 
 
     }
-
-
 
 
     private void catchSpeech() {

@@ -6,97 +6,77 @@
     android:layout_height="match_parent"
     android:background="@drawable/background">
 
-
-    <CheckBox
-        android:id="@+id/quinta"
-        android:layout_width="409dp"
-        android:layout_height="51dp"
-        android:text="@string/quinta_feira"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/sexta"
-        app:layout_constraintTop_toBottomOf="@+id/quarta"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp" />
-
-    <CheckBox
-        android:id="@+id/quarta"
-        android:layout_width="409dp"
-        android:layout_height="43dp"
-        android:text="@string/quarta_feira"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/quinta"
-        app:layout_constraintTop_toBottomOf="@+id/terça"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp" />
-
-    <CheckBox
-        android:id="@+id/terça"
-        android:layout_width="409dp"
-        android:layout_height="44dp"
-        android:text="@string/ter_a_feira"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/quarta"
-        app:layout_constraintTop_toBottomOf="@+id/segunda"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp" />
-
-    <CheckBox
-        android:id="@+id/segunda"
-        android:layout_width="405dp"
-        android:layout_height="86dp"
-        android:text="@string/segunda_feira"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/terça"
-        app:layout_constraintTop_toBottomOf="@+id/microphone"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp" />
-
     <ImageView
         android:id="@+id/microphone"
-        android:layout_width="157dp"
-        android:layout_height="174dp"
+        android:layout_width="189dp"
+        android:layout_height="188dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.586"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.244"
         app:srcCompat="@drawable/ic_microphone"
         tools:ignore="VectorDrawableCompat" />
 
-    <CheckBox
-        android:id="@+id/sexta"
-        android:layout_width="409dp"
-        android:layout_height="63dp"
-        android:text="@string/sexta_feira"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/sabado"
-        app:layout_constraintTop_toBottomOf="@+id/quinta"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp" />
-
-    <CheckBox
-        android:id="@+id/sabado"
-        android:layout_width="409dp"
-        android:layout_height="63dp"
-        android:text="@string/s_bado"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/domingo"
-        app:layout_constraintTop_toBottomOf="@+id/sexta"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp" />
-
-    <CheckBox
-        android:id="@+id/domingo"
-        android:layout_width="409dp"
-        android:layout_height="48dp"
-        android:text="@string/domingo"
-        android:textSize="20sp"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ALARME"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sabado"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adicionar alarme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/microphone"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editText9"
+        android:layout_width="398dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint=" Aqui será adicionado seu título"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editText10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/microphone" />
+
+    <EditText
+        android:id="@+id/editText10"
+        android:layout_width="397dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:hint=" Aqui será adicionado os dias da semana"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editText11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText9" />
+
+    <EditText
+        android:id="@+id/editText11"
+        android:layout_width="396dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint=" Aqui será adicionado a hora"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText10" />
 
 
 </android.support.constraint.ConstraintLayout>
