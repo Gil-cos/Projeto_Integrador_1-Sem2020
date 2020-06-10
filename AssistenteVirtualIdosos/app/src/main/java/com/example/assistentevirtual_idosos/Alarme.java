@@ -104,15 +104,14 @@ public class Alarme extends AppCompatActivity {
         map.put("segunda", Calendar.MONDAY);
         map.put("terça", Calendar.TUESDAY);
         map.put("quarta", Calendar.WEDNESDAY);
-        map.put("quinta", Calendar.TUESDAY);
+        map.put("quinta", Calendar.THURSDAY);
         map.put("sexta", Calendar.FRIDAY);
         map.put("sábado", Calendar.SATURDAY);
         map.put("domingo", Calendar.SUNDAY);
 
         ArrayList<Integer> days = new ArrayList<>();
-        for (int i = 1; i <= valoresDias.length; i++){
+        for (int i = 1; i < valoresDias.length; i++){
             days.add(map.get(valoresDias[i]));
-
         }
 
 
