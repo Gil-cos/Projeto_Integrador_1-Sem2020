@@ -83,23 +83,15 @@ public class Alarme extends AppCompatActivity {
             valores = speech.split(" ");
             titulo.setText(valores[1]);
 
-
         }
 
         if (speech.toUpperCase().contains("HORÁRIO")) {
             valores = speech.split(" ");
             horario.setText(valores[1]);
-
-
         }
 
         if (speech.toUpperCase().contains("DIAS")) {
-
             valoresDias = speech.split(" ");
-
-
-
-
         }
 
 
@@ -109,25 +101,28 @@ public class Alarme extends AppCompatActivity {
 
     private void createAlarm() {
         Map<String,Integer> map = new HashMap<>();
-        map.put("segunda", 2);
-        map.put("terça", 3);
-        map.put("quarta", 4);
-        map.put("quinta", 5);
-        map.put("sexta", 6);
-        map.put("sábado", 7);
-        map.put("domingo", 8);
+        map.put("segunda", Calendar.MONDAY);
+        map.put("terça", Calendar.TUESDAY);
+        map.put("quarta", Calendar.WEDNESDAY);
+        map.put("quinta", Calendar.TUESDAY);
+        map.put("sexta", Calendar.FRIDAY);
+        map.put("sábado", Calendar.SATURDAY);
+        map.put("domingo", Calendar.SUNDAY);
 
-        ArrayList<Integer> Days = new ArrayList<>();
-        for (int i = 1; i > valoresDias.length; i++){
-            Days.add(map.get(valoresDias[i]));
+        ArrayList<Integer> days = new ArrayList<>();
+        for (int i = 1; i <= valoresDias.length; i++){
+            days.add(map.get(valoresDias[i]));
+
         }
+
+
         array_hour = horario.getText().toString().split(":");
 
         Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM)
-                .putExtra(AlarmClock.EXTRA_MESSAGE, titulo.getText())
+                .putExtra(AlarmClock.EXTRA_MESSAGE, titulo.getText().toString())
                 .putExtra(AlarmClock.EXTRA_HOUR, Integer.parseInt(array_hour[0]))
                 .putExtra(AlarmClock.EXTRA_MINUTES, Integer.parseInt(array_hour[1]))
-                .putExtra(AlarmClock.EXTRA_DAYS, Days);
+                .putExtra(AlarmClock.EXTRA_DAYS, days);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
