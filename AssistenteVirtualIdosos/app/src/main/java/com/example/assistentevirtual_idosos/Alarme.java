@@ -2,6 +2,7 @@ package com.example.assistentevirtual_idosos;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.provider.AlarmClock;
 import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,16 +10,22 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
 public class Alarme extends AppCompatActivity {
+   private EditText titulo;
+   private EditText diasSemana;
+   private EditText horario;
+   private String array_hour[];
 
-    @Override
+   @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarme);
@@ -29,18 +36,17 @@ public class Alarme extends AppCompatActivity {
                 catchSpeech();
             }
         });
+        titulo = findViewById(R.id.editText9);
+        diasSemana = findViewById(R.id.editText10);
+        horario = findViewById(R.id.editText11);
 
-    }
+        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
 
-    public static void main(String[] args){
-        Map<String,String> map = new HashMap<>();
-        map.put("segunda-feira", "MONDAY");
-        map.put("terça-feira", "TUESDAY");
-        map.put("quarta-feira", "WEDNESDAY");
-        map.put("quinta-feira", "THURSDAY");
-        map.put("sexta-feira", "FRIDAY");
-        map.put("sábado", "SATURDAY");
-        map.put("domingo", "SUNDAY");
+            @Override
+            public void onClick(View v) {
+                createAlarm();
+            }
+      });
     }
 
     @Override
@@ -73,6 +79,8 @@ public class Alarme extends AppCompatActivity {
 
 
         if (speech.toUpperCase().contains("TITULO")) {
+            String valores[] = speech.split(" ");
+            titulo.setText(valores[1]);
 
 
         }
@@ -82,7 +90,7 @@ public class Alarme extends AppCompatActivity {
 
         }
 
-        if (speech.toUpperCase().contains("DIAS DA SEMANA ")) {
+        if (speech.toUpperCase().contains("DIAS DA SEMANA")) {
 
 
         }
@@ -92,6 +100,26 @@ public class Alarme extends AppCompatActivity {
     }
 
 
+    private void createAlarm() {
+
+        ArrayList<Integer> Days = new ArrayList<>();
+        Days.add(Calendar.MONDAY);
+        Days.add(Calendar.TUESDAY);
+        Days.add(Calendar.WEDNESDAY);
+        Days.add(Calendar.THURSDAY);
+        Days.add(Calendar.FRIDAY);
+        Days.add(Calendar.SATURDAY);
+        Days.add(Calendar.SUNDAY);
+
+        Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM)
+                .putExtra(AlarmClock.EXTRA_MESSAGE, titulo.getText())
+                .putExtra(AlarmClock.EXTRA_HOUR, Integer.parseInt(array_hour[0]))
+                .putExtra(AlarmClock.EXTRA_MINUTES, Integer.parseInt(array_hour[1]))
+                .putExtra(AlarmClock.EXTRA_DAYS, Days);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
     private void catchSpeech() {
 
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
