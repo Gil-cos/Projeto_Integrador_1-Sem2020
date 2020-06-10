@@ -2,10 +2,9 @@ package com.example.assistentevirtual_idosos;
 
 public enum ModelObject {
     //Definir cores:
-    RED(R.string.red, R.layout.view_red),
-    BLUE(R.string.blue, R.layout.view_blue),
-    GREEN(R.string.green, R.layout.view_green),
-    YELLOW(R.string.yellow,R.layout.view_yellow);
+    WIFI(R.string.wifi, R.layout.wifi),
+    FOTO(R.string.foto, R.layout.foto),
+    BLUETOOTH(R.string.bluetooth, R.layout.bluetooth);
 
     private int mTitleResId;
     private int mLayoutResId;
