@@ -8,11 +8,11 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
+import android.os.Bundle;
 import android.provider.MediaStore;
 import android.speech.RecognizerIntent;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 import java.util.ArrayList;
@@ -143,6 +143,10 @@ public class MainActivity extends AppCompatActivity {
         //if (intent.resolveActivity(getPackageManager()) != null) {
            // startActivity(intent);
         //}
+
+        //Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+        //intent.putExtra(SearchManager.QUERY, "Search query");
+        //startActivity(intent);
     }
 
     private void enableBluetooth() {
