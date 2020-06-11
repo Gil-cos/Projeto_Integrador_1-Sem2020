@@ -37,7 +37,7 @@
       android:layout_width="271dp"
       android:layout_height="266dp"
       android:gravity="center"
-      android:text='Ao falar o comando "tirar foto", a câmera do celular será aberta.'
+      android:text=' - Ao falar o comando "tirar foto", a câmera do celular será aberta.'
       android:textColor="#08B18F"
       android:textSize="24sp"
       app:fontFamily="@font/fredoka_one"
