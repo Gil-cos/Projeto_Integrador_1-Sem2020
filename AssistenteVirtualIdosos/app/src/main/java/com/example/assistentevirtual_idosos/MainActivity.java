@@ -76,30 +76,26 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (speech.toUpperCase().equals("TIRAR FOTO")) {
-            Cameraopen();
+            openCamera();
             return;
         }
 
         if (speech.toUpperCase().equals("ATIVAR BLUETOOTH")){
-
             enableBluetooth();
             return;
         }
 
         if (speech.toUpperCase().equals("DESATIVAR BLUETOOTH")){
-
             disableBluetooth();
             return;
         }
 
         if(speech.toUpperCase().equals("ATIVAR INTERNET")){
-
             enableWifi();
             return;
         }
 
         if (speech.toUpperCase().equals("DESATIVAR INTERNET")) {
-
             disableWifi();
             return;
         }
@@ -108,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Funcionalidade não existente, veja a lista de funções no ícone abaixo do microfone.", Toast.LENGTH_LONG).show();
         }
     }
-
 
     private void callSOS() {
         //Método para ligar para Emergência
@@ -124,7 +119,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void Cameraopen(){
+    private void openCamera(){
+        //Método para abrir a câmera
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             Toast.makeText(this, "Abrindo Câmera", Toast.LENGTH_LONG).show();
@@ -138,23 +134,14 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speak please");
         startActivity(intent);
-        //Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
-        //intent.putExtra(SearchManager.QUERY, query);
-        //if (intent.resolveActivity(getPackageManager()) != null) {
-           // startActivity(intent);
-        //}
-
-        //Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
-        //intent.putExtra(SearchManager.QUERY, "Search query");
-        //startActivity(intent);
+        Toast.makeText(getApplicationContext(), "Reconhecimento de Voz para Pesquisa Aberto" +  "\n\nDiga sua Pesquisa", Toast.LENGTH_LONG).show();
     }
 
     private void enableBluetooth() {
-        // Comando para ativar o bluetooth
+        //Comando para ativar o bluetooth
         BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
         btAdapter.enable();
         Toast.makeText(getApplicationContext(), "Bluetooth ativado", Toast.LENGTH_LONG).show();
-
     }
 
     private void disableBluetooth() {
@@ -162,21 +149,18 @@ public class MainActivity extends AppCompatActivity {
         BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
         btAdapter.disable();
         Toast.makeText(getApplicationContext(), "Bluetooth desativado", Toast.LENGTH_LONG).show();
-
     }
 
     private void enableWifi(){
         //Comando para ativar o wi-fi
         wifi.setWifiEnabled(true);
         Toast.makeText(getApplicationContext(), "Wi-fi ativado", Toast.LENGTH_LONG).show();
-
     }
 
     private void disableWifi(){
         //Comando para desativar o wi-fi
         wifi.setWifiEnabled(false);
         Toast.makeText(getApplicationContext(), "Wi-fi desativado", Toast.LENGTH_LONG).show();
-
     }
 
     private void catchSpeech() {
