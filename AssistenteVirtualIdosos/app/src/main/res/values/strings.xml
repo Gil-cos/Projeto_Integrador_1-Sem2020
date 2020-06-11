@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Assistente Virtual - Idosos</string>
+    
+    <string name="wifi"> WIFI </string>
+    <string name="bluetooth"> BLUETOOTH </string>
+    <string name="foto"> FOTO </string>
 </resources>
