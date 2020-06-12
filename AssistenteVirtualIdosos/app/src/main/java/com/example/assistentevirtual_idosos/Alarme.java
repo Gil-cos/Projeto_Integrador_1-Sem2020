@@ -37,6 +37,7 @@ public class Alarme extends AppCompatActivity {
                 catchSpeech();
             }
         });
+
         titulo = findViewById(R.id.editText9);
         diasSemana = findViewById(R.id.editText10);
         horario = findViewById(R.id.editText11);
@@ -92,6 +93,9 @@ public class Alarme extends AppCompatActivity {
 
         if (speech.toUpperCase().contains("DIAS")) {
             valoresDias = speech.split(" ");
+            diasSemana.setText(valoresDias[1] + " " + valoresDias[2] + " " + valoresDias[3] + " " + valoresDias[4] + " " + valoresDias[5]);
+
+
         }
 
 
