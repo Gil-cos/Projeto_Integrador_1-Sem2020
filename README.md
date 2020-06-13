@@ -66,3 +66,5 @@
 # Entregas:
 ## - [Entrega 02](https://github.com/Gil-cos/Projeto_Integrador_1-Sem2020/tree/master/Entregas%20PI%20-%20Grupo%208/Entrega%2002)
 ## - [Entrega 03](https://www.youtube.com/watch?v=Q-cQ-0FwXa8&feature=youtu.be)
+
+## - [Entrega 04](https://www.youtube.com/watch?v=hfChLMHEkik&feature=youtu.be)
