@@ -119,9 +119,4 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="20dp" />
 
-
 </android.support.constraint.ConstraintLayout>
-
-
-
-

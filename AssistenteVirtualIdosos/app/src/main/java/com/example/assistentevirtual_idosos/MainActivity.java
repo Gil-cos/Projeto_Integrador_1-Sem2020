@@ -9,17 +9,13 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.provider.AlarmClock;
 import android.provider.MediaStore;
 import android.speech.RecognizerIntent;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.microphone).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 catchSpeech();
             }
         });
@@ -49,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
 
     @Override
     public void onDestroy() {
@@ -115,10 +108,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if(speech.toUpperCase().equals("ADICIONAR ALARME")){
-
             openAlarm();
             return;
-
         }
 
         else{
@@ -187,8 +178,8 @@ public class MainActivity extends AppCompatActivity {
     private void openAlarm() {
         Intent intent = new Intent(this, Alarme.class);
         startActivity(intent);
-
     }
+
     private void catchSpeech() {
 
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
