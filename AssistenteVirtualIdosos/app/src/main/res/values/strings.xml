@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">Assistente Virtual - Idosos</string>
-    
     <string name="wifi"> WIFI </string>
     <string name="bluetooth"> BLUETOOTH </string>
     <string name="foto"> FOTO </string>
+    <string name="quinta_feira">Quinta-Feira</string>
+    <string name="quarta_feira">Quarta-Feira</string>
+    <string name="ter_a_feira">Terça-Feira</string>
+    <string name="segunda_feira">Segunda-Feira</string>
+    <string name="todo">TODO</string>
+    <string name="sexta_feira">Sexta-Feira</string>
+    <string name="s_bado">Sábado</string>
+    <string name="domingo">Domingo</string>
+    <string name="alarme">ALARME</string>
+    <string name="aqui_ser_adicionado_seu_t_tulo">Aqui será adicionado seu título</string>
+
 </resources>
