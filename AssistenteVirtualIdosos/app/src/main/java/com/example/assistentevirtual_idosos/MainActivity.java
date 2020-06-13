@@ -8,11 +8,11 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
+import android.os.Bundle;
 import android.provider.MediaStore;
 import android.speech.RecognizerIntent;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 import java.util.ArrayList;
@@ -34,6 +34,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 catchSpeech();
+            }
+        });
+        findViewById(R.id.icon3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), View_pager.class);
+                startActivity(intent);
             }
         });
     }
@@ -66,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     private void processMachineLearning(String speech) {
 
         if (speech.toUpperCase().equals("PESQUISAR")) {
-            openURL();
+            searchGoogle();
             return;
         }
 
@@ -76,31 +83,32 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (speech.toUpperCase().equals("TIRAR FOTO")) {
-            Cameraopen();
+            openCamera();
             return;
         }
 
         if (speech.toUpperCase().equals("ATIVAR BLUETOOTH")){
-
             enableBluetooth();
             return;
         }
 
         if (speech.toUpperCase().equals("DESATIVAR BLUETOOTH")){
-
             disableBluetooth();
             return;
         }
 
         if(speech.toUpperCase().equals("ATIVAR INTERNET")){
-
             enableWifi();
             return;
         }
 
         if (speech.toUpperCase().equals("DESATIVAR INTERNET")) {
-
             disableWifi();
+            return;
+        }
+
+        if(speech.toUpperCase().equals("ADICIONAR ALARME")){
+            openAlarm();
             return;
         }
 
@@ -108,7 +116,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Funcionalidade não existente, veja a lista de funções no ícone abaixo do microfone.", Toast.LENGTH_LONG).show();
         }
     }
-
 
     private void callSOS() {
         //Método para ligar para Emergência
@@ -124,7 +131,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void Cameraopen(){
+    private void openCamera(){
+        //Método para abrir a câmera
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             Toast.makeText(this, "Abrindo Câmera", Toast.LENGTH_LONG).show();
@@ -132,21 +140,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void openURL() {
-        //Método para abrir o navegador
-        String URL = "http://www.google.com";
-
-        Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(URL));
-        Toast.makeText(this,"Abrindo Navegador",Toast.LENGTH_LONG).show();
+    private void searchGoogle() {
+        //Método para realizar pesquisas
+        Intent intent = new Intent(RecognizerIntent.ACTION_WEB_SEARCH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speak please");
         startActivity(intent);
+        Toast.makeText(getApplicationContext(), "Reconhecimento de Voz para Pesquisa Aberto" +  "\n\nDiga sua Pesquisa", Toast.LENGTH_LONG).show();
     }
 
     private void enableBluetooth() {
-        // Comando para ativar o bluetooth
+        //Comando para ativar o bluetooth
         BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
         btAdapter.enable();
         Toast.makeText(getApplicationContext(), "Bluetooth ativado", Toast.LENGTH_LONG).show();
-
     }
 
     private void disableBluetooth() {
@@ -154,21 +161,23 @@ public class MainActivity extends AppCompatActivity {
         BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
         btAdapter.disable();
         Toast.makeText(getApplicationContext(), "Bluetooth desativado", Toast.LENGTH_LONG).show();
-
     }
 
     private void enableWifi(){
         //Comando para ativar o wi-fi
         wifi.setWifiEnabled(true);
         Toast.makeText(getApplicationContext(), "Wi-fi ativado", Toast.LENGTH_LONG).show();
-
     }
 
     private void disableWifi(){
         //Comando para desativar o wi-fi
         wifi.setWifiEnabled(false);
         Toast.makeText(getApplicationContext(), "Wi-fi desativado", Toast.LENGTH_LONG).show();
+    }
 
+    private void openAlarm() {
+        Intent intent = new Intent(this, Alarme.class);
+        startActivity(intent);
     }
 
     private void catchSpeech() {
