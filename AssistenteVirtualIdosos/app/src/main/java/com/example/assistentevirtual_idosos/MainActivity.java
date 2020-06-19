@@ -111,6 +111,9 @@ public class MainActivity extends AppCompatActivity {
             openAlarm();
             return;
         }
+        if(speech.toUpperCase().equals("ADICIONAR EVENTO")){
+            openEvent();
+        }
 
         else{
             Toast.makeText(this, "Funcionalidade não existente, veja a lista de funções no ícone abaixo do microfone.", Toast.LENGTH_LONG).show();
@@ -179,6 +182,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Alarme.class);
         startActivity(intent);
     }
+    private void openEvent(){
+        Intent intent = new Intent(this, activityEvent.class);
+        startActivity(intent);
+    }
+
 
     private void catchSpeech() {
 
