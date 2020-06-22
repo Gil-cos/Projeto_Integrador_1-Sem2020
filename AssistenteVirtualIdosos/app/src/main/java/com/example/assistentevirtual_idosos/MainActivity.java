@@ -11,12 +11,12 @@ import android.net.wifi.WifiManager;
 import android.provider.MediaStore;
 import android.speech.RecognizerIntent;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
+
+
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -46,9 +46,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
-
-
 
     @Override
     public void onDestroy() {
@@ -117,9 +116,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         else{
-            Toast.makeText(this, "Funcionalidade não existente, veja a lista de funções no ícone abaixo do microfone.", Toast.LENGTH_LONG).show();
-        }
+        Toast.makeText(this, "Funcionalidade não existente, veja a lista de funções no ícone abaixo do microfone.", Toast.LENGTH_LONG).show();
     }
+}
 
 
     private void callSOS() {
@@ -196,4 +195,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Reconhecimento de voz não suportado", Toast.LENGTH_SHORT).show();
         }
     }
+
+
 }

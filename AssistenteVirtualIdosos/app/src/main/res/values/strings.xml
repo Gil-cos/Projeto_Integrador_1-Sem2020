@@ -4,4 +4,7 @@
     <string name="wifi"> WIFI </string>
     <string name="bluetooth"> BLUETOOTH </string>
     <string name="foto"> FOTO </string>
+    <string name="pesquisar"> PESQUISAR </string>
+    <string name="zoom"> ZOOM </string>
+    <string name="alarme"> ALARME </string>
 </resources>
