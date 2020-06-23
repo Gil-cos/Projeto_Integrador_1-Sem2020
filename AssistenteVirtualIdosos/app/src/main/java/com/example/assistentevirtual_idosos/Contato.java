@@ -86,11 +86,10 @@ public class Contato extends AppCompatActivity {
     }
 
     private void addContact(){
-        String name = null;
-
-        Intent intent = new Intent(Intent.ACTION_INSERT);
+        Intent intent = new Intent(ContactsContract.Intents.Insert.ACTION);
         intent.setType(ContactsContract.Contacts.CONTENT_TYPE);
-        intent.putExtra(ContactsContract.Intents.Insert.NAME, name);
+        intent.putExtra(ContactsContract.Intents.Insert.NAME, nome.getText().toString());
+        intent.putExtra(ContactsContract.Intents.Insert.PHONE, numero.getText());
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
             Toast.makeText(this, "Contato adicionado.", Toast.LENGTH_LONG).show();
