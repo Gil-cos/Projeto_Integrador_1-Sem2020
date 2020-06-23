@@ -7,24 +7,42 @@ import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class Activity_contato extends AppCompatActivity {
+public class Contato extends AppCompatActivity {
+
+    private EditText nome;
+    private EditText numero;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contato);
 
-        findViewById(R.id.microphone).setOnClickListener(new View.OnClickListener() {
+        nome = findViewById(R.id.adicionar_nome);
+        numero = findViewById(R.id.adicionar_numero);
+
+        findViewById(R.id.mic).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 catchSpeech();
             }
         });
+
+        findViewById(R.id.adicionar_contato).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addContact();
+            }
+        });
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
     }
 
     @Override
@@ -48,9 +66,17 @@ public class Activity_contato extends AppCompatActivity {
     }
 
     private void processMachineLearning(String speech) {
+        String valores[];
 
-        if (speech.toUpperCase().equals("Nome")) {
-            addContact();
+        if (speech.toUpperCase().contains("NOME")) {
+            valores = speech.split(" ");
+            nome.setText(valores[1]);
+            return;
+        }
+
+        if (speech.toUpperCase().contains("NÚMERO")) {
+            valores = speech.split(" ");
+            numero.setText(valores[1]);
             return;
         }
 
@@ -67,6 +93,7 @@ public class Activity_contato extends AppCompatActivity {
         intent.putExtra(ContactsContract.Intents.Insert.NAME, name);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
+            Toast.makeText(this, "Contato adicionado.", Toast.LENGTH_LONG).show();
         }
     }
 

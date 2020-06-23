@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.assistentevirtual_idosos">
+    package="com.example.assistentevirtual_idosos" >
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -16,13 +16,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Activity_contato"></activity>
-        <activity android:name=".contato" />
+        android:theme="@style/AppTheme" >
         <activity android:name=".Contato" />
         <activity android:name=".View_pager" />
         <activity android:name=".Alarme" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="com.google.android.gms.actions.SEARCH_ACTION" />

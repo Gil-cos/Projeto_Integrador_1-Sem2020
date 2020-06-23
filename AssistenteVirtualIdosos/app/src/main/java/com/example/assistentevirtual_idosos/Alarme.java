@@ -96,11 +96,7 @@ public class Alarme extends AppCompatActivity {
         }else{
             Toast.makeText(this, "Informe um dia, horário e um título", Toast.LENGTH_LONG).show();
         }
-
-
-
     }
-
 
     private void createAlarm() {
         Map<String,Integer> map = new HashMap<>();
@@ -117,7 +113,6 @@ public class Alarme extends AppCompatActivity {
             days.add(map.get(valoresDias[i]));
         }
 
-
         array_hour = horario.getText().toString().split(":");
 
         Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM)
@@ -129,6 +124,7 @@ public class Alarme extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
     private void catchSpeech() {
 
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);

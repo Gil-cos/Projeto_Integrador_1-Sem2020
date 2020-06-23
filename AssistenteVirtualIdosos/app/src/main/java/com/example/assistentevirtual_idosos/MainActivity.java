@@ -5,10 +5,12 @@ import android.bluetooth.BluetoothAdapter;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.LabeledIntent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.speech.RecognizerIntent;
 import android.support.v4.app.ActivityCompat;
@@ -181,14 +183,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openAlarm() {
-        //Método para se levar a página para se adicionar o alarme
+        //Método para se levar a página para adicionar o alarme
         Intent intent = new Intent(this, Alarme.class);
         startActivity(intent);
     }
 
     private void addContact(){
-        //Método para se levar a página para se adicionar o contato
-        Intent intent = new Intent(this, Activity_contato.class);
+        //Método para se levar a página para adicionar o contato
+        Intent intent = new Intent(this, Contato.class);
         startActivity(intent);
     }
 
