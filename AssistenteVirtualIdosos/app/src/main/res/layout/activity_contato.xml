@@ -50,7 +50,7 @@
         app:layout_constraintVertical_bias="0.23000002" />
 
     <EditText
-        android:id="@+id/preenchimento_alarme"
+        android:id="@+id/adicionar_nome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -62,18 +62,18 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/número_contato"
+        android:id="@+id/numero_contato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Número"
-        app:layout_constraintBottom_toTopOf="@+id/preenchimento_contato"
+        app:layout_constraintBottom_toTopOf="@+id/adicionar_numero"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/preenchimento_alarme"
+        app:layout_constraintTop_toBottomOf="@+id/adicionar_nome"
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/preenchimento_contato"
+        android:id="@+id/adicionar_numero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -81,7 +81,7 @@
         app:layout_constraintBottom_toTopOf="@+id/adicionar_contato"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/preenchimento_alarme" />
+        app:layout_constraintTop_toBottomOf="@+id/adicionar_nome" />
 
     <Button
         android:id="@+id/adicionar_contato"

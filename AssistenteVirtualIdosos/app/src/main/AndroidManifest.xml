@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".contato"></activity>
+        <activity android:name=".Activity_contato"></activity>
+        <activity android:name=".contato" />
         <activity android:name=".Contato" />
         <activity android:name=".View_pager" />
         <activity android:name=".Alarme" />

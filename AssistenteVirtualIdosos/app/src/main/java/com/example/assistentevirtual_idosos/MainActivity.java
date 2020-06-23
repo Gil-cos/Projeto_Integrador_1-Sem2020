@@ -112,6 +112,11 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        if(speech.toUpperCase().equals("ADICIONAR CONTATO")){
+            addContact();
+            return;
+        }
+
         else{
             Toast.makeText(this, "Funcionalidade não existente, veja a lista de funções no ícone abaixo do microfone.", Toast.LENGTH_LONG).show();
         }
@@ -150,33 +155,40 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void enableBluetooth() {
-        //Comando para ativar o bluetooth
+        //Método para ativar o bluetooth
         BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
         btAdapter.enable();
         Toast.makeText(getApplicationContext(), "Bluetooth ativado", Toast.LENGTH_LONG).show();
     }
 
     private void disableBluetooth() {
-        //Comando para desativar o bluetooth
+        //Método para desativar o bluetooth
         BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
         btAdapter.disable();
         Toast.makeText(getApplicationContext(), "Bluetooth desativado", Toast.LENGTH_LONG).show();
     }
 
     private void enableWifi(){
-        //Comando para ativar o wi-fi
+        //Método para ativar o wi-fi
         wifi.setWifiEnabled(true);
         Toast.makeText(getApplicationContext(), "Wi-fi ativado", Toast.LENGTH_LONG).show();
     }
 
     private void disableWifi(){
-        //Comando para desativar o wi-fi
+        //Método para desativar o wi-fi
         wifi.setWifiEnabled(false);
         Toast.makeText(getApplicationContext(), "Wi-fi desativado", Toast.LENGTH_LONG).show();
     }
 
     private void openAlarm() {
+        //Método para se levar a página para se adicionar o alarme
         Intent intent = new Intent(this, Alarme.class);
+        startActivity(intent);
+    }
+
+    private void addContact(){
+        //Método para se levar a página para se adicionar o contato
+        Intent intent = new Intent(this, Activity_contato.class);
         startActivity(intent);
     }
 
