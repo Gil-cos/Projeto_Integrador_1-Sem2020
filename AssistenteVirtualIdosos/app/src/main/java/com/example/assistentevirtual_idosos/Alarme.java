@@ -38,7 +38,7 @@ public class Alarme extends AppCompatActivity {
         diasSemana = findViewById(R.id.editText10);
         horario = findViewById(R.id.editText11);
 
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.adicionar_alarme).setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
