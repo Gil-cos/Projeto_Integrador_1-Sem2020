@@ -36,31 +36,26 @@
 ### Ao falar o comando "desligar bluetooth", o Bluetooth do celular será desativado.
 
 
-
 # Sprint 4:
 
 ## 4. Adicionar alarme
 
-### Descrição: Ao falar o comando "adicionar um alarme", será requerido ao usuário (por meio de um comando de voz) o horário,dias da semana e título desejados, então o alarme será definido por meio do aplicativo de relógio do Android.
-
+### Descrição: Ao falar o comando "adicionar um alarme", o usuário será redirecionado para uma outra tela no próprio aplicativo, onde será requerido (por comando de voz) o horário,dias da semana e título desejados, após isso o alarme será definido por meio de um click no botão, e será adicionado no aplicativo de relógio do Android.
 
 ## 5. Pesquisa na WEB
 
 ### Descrição: Ao falar o comando "pesquisar: (o que deseja ser pesquisado)", o Google será aberto com os resultados da pesquisa.
 
 
-
 # Sprint 5:
 
-## 6. Ativar/desativar zoom na tela
+## 6. Adicionar Contato
 
-### Descrição: Ao falar o comando "aplicar zoom", o conteúdo da tela será aumentado.
-### Ao falar o comando "remover zoom", o conteúdo da tela voltará a configuração padrão do celular.
+### Descrição: Ao falar o comando "adicionar contato", o usuário será redirecionado para uma outra tela no próprio aplicativo, onde será requerido (por comando de voz) o nome e número desejados, após isso será redirecionado para o aplicativo de contatos do Android por meio de um click no botão, e depois de salvar o contato, ele será cadastrado.
 
-## 7. Agendar Eventos
+## 7. Fazer Ligações
 
-### Descrição: Ao falar o comando "agendar evento", será requerido ao usuário (por meio de entrada de texto na própria aplicação) o dia, hora e título, assim o evento será criado no aplicativo de agenda do Android.
-
+### Descrição: Ao falar o comando "ligar para '+ número desejado'" o aplicativo redireciona o usuário para a tela de ligações padrão do Android, onde será iniciado uma chamada para o número requerido pelo usuário.
 
 
 # Entregas:
