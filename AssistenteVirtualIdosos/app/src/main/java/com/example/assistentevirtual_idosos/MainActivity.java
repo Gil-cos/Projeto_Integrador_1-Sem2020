@@ -111,8 +111,9 @@ public class MainActivity extends AppCompatActivity {
             openAlarm();
             return;
         }
-        if(speech.toUpperCase().equals("ADICIONAR EVENTO")){
-            openEvent();
+        if(speech.toUpperCase().contains("LIGAR PARA")){
+            call(speech);
+            return;
         }
 
         else{
@@ -182,10 +183,21 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Alarme.class);
         startActivity(intent);
     }
-    private void openEvent(){
-        Intent intent = new Intent(this, activityEvent.class);
-        startActivity(intent);
+
+    private void call(String speech){
+        String phone[] = speech.split(" ");
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        intent.setData(Uri.parse("tel:" + phone[2]));
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CALL_PHONE}, 1);
+                return;
+            }
+            Toast.makeText(this, "Ligando para" + " " + phone[2], Toast.LENGTH_LONG).show();
+            startActivity(intent);
+        }
     }
+
 
 
     private void catchSpeech() {

@@ -17,7 +17,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activityEvent"></activity>
         <activity android:name=".View_pager" />
         <activity android:name=".Alarme" />
         <activity android:name=".MainActivity">

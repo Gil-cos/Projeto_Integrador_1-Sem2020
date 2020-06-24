@@ -90,7 +90,11 @@ public class Alarme extends AppCompatActivity {
 
         if (speech.toUpperCase().contains("DIAS")) {
             valoresDias = speech.split(" ");
-            diasSemana.setText(valoresDias[1] + " " + valoresDias[2] + " " + valoresDias[3] + " " + valoresDias[4] + " " + valoresDias[5]);
+            String dias = "";
+            for (int i = 1; i < valoresDias.length; i++){
+                dias += valoresDias[i] + " ";
+            }
+            diasSemana.setText(dias);
             return;
 
         }else{
@@ -117,7 +121,6 @@ public class Alarme extends AppCompatActivity {
             days.add(map.get(valoresDias[i]));
         }
 
-
         array_hour = horario.getText().toString().split(":");
 
         Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM)
@@ -129,6 +132,7 @@ public class Alarme extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
     private void catchSpeech() {
 
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
