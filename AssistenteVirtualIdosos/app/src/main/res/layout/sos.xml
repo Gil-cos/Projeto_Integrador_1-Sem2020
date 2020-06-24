@@ -8,10 +8,10 @@
     android:background="@drawable/background_5">
 
     <ImageView
-        android:id="@+id/zoom"
-        android:layout_width="157dp"
-        android:layout_height="154dp"
-        android:background="@drawable/ic_iconfinder_12_zoom_in_106237"
+        android:id="@+id/imageView"
+        android:layout_width="161dp"
+        android:layout_height="168dp"
+        android:background="@drawable/ic_iconfinder___medical_help_call_health_telephone_emergency_6124131"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Zoom"
+        android:text="S.O.S"
         android:textColor="#08B18F"
         android:textSize="45sp"
         app:fontFamily="@font/fredoka_one"
@@ -34,11 +34,10 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="296dp"
-        android:layout_height="288dp"
+        android:layout_width="328dp"
+        android:layout_height="313dp"
         android:gravity="center"
-        android:text=' - Ao falar o comando "aplicar zoom", o conteúdo da tela será aumentado.
-                            -   Ao falar o comando "remover zoom", o conteúdo da tela voltará a configuração padrão do celular.'
+        android:text='- Ao falar o comando "ajuda", será efetuada uma chamada para o número da emergência (192) pelo aplicativo de ligação padrão do Android.'
         android:textColor="#08B18F"
         android:textSize="24sp"
         app:fontFamily="@font/fredoka_one"

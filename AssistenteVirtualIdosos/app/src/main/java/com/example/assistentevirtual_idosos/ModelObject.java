@@ -6,7 +6,10 @@ public enum ModelObject {
     FOTO(R.string.foto, R.layout.foto),
     BLUETOOTH(R.string.bluetooth, R.layout.bluetooth),
     PESQUISAR(R.string.pesquisar, R.layout.pesquisar),
-    ZOOM(R.string.zoom, R.layout.zoom);
+    SOS(R.string.sos, R.layout.sos),
+    LIGACAO(R.string.ligacao, R.layout.ligacao),
+    CONTATO(R.string.contato, R.layout.contato),
+    ALARME(R.string.alarme, R.layout.alarme);
 
 
 
