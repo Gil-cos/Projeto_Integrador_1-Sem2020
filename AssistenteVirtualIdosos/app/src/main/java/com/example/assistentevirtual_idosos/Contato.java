@@ -70,29 +70,37 @@ public class Contato extends AppCompatActivity {
 
         if (speech.toUpperCase().contains("NOME")) {
             valores = speech.split(" ");
-            nome.setText(valores[1]);
+            String nomes = "";
+            for (int i = 1; i < valores.length; i++){
+                nomes += valores[i] + " ";
+            }
+            nome.setText(nomes);
             return;
         }
 
         if (speech.toUpperCase().contains("NÚMERO")) {
             valores = speech.split(" ");
-            numero.setText(valores[1]);
+            String numeros = "";
+            for(int i = 1; i < valores.length; i++){
+                numeros += valores[i] + " ";
+            }
+            numero.setText(numeros);
             return;
         }
 
         else{
-            Toast.makeText(this, "Funcionalidade não existente, diga o nome e número do contato.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Informações inválidas, diga um nome e um número válidos.", Toast.LENGTH_LONG).show();
         }
     }
 
     private void addContact(){
         Intent intent = new Intent(ContactsContract.Intents.Insert.ACTION);
-        intent.setType(ContactsContract.Contacts.CONTENT_TYPE);
+        intent.setType(ContactsContract.RawContacts.CONTENT_TYPE);
         intent.putExtra(ContactsContract.Intents.Insert.NAME, nome.getText().toString());
         intent.putExtra(ContactsContract.Intents.Insert.PHONE, numero.getText());
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
-            Toast.makeText(this, "Contato adicionado.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Salve o Contato. Após isso Contato adicionado.", Toast.LENGTH_LONG).show();
         }
     }
 
