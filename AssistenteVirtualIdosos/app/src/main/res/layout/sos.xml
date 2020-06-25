@@ -37,7 +37,7 @@
         android:layout_width="328dp"
         android:layout_height="313dp"
         android:gravity="center"
-        android:text='- Ao falar o comando "ajuda", será efetuada uma chamada para o número da emergência (192) pelo aplicativo de ligação padrão do Android.'
+        android:text='- Ao falar o comando "ajuda", será efetuada uma chamada para o número da emergência (192).'
         android:textColor="#08B18F"
         android:textSize="24sp"
         app:fontFamily="@font/fredoka_one"

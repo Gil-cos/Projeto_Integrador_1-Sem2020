@@ -34,11 +34,11 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="296dp"
-        android:layout_height="224dp"
+        android:layout_width="313dp"
+        android:layout_height="252dp"
         android:gravity="center"
-        android:text='- Ao falar o comando "ativar internet", o Wi-Fi do celular será ativado.
-                    - Ao falar o comando "desativar internet", o Wi-Fi do celular será desativado.'
+        android:text='- Ao falar o comando "ligar internet", o Wi-Fi do celular será ativado.\n\n
+- Ao falar o comando "desligar internet", o Wi-Fi do celular será desativado.'
         android:textColor="#08B18F"
         android:textSize="24sp"
         app:fontFamily="@font/fredoka_one"

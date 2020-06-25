@@ -34,19 +34,18 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="271dp"
-        android:layout_height="269dp"
+        android:layout_width="288dp"
+        android:layout_height="294dp"
         android:gravity="center"
-        android:text='- Ao falar o comando "ativar bluetooth", o Bluetooth do celular será ativado.
-                    - Ao falar o comando "desativar bluetooth", o Bluetooth do celular será desativado.'
+        android:text='- Ao falar o comando "ligar bluetooth", o Bluetooth do celular será ativado.\n\n
+- Ao falar o comando "desligar bluetooth", o Bluetooth do celular será desativado.'
         android:textColor="#08B18F"
         android:textSize="24sp"
         app:fontFamily="@font/fredoka_one"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.327" />
+        app:layout_constraintVertical_bias="0.342" />
 
 </android.support.constraint.ConstraintLayout>

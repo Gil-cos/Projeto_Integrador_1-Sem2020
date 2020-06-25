@@ -34,11 +34,11 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="347dp"
-        android:layout_height="393dp"
+        android:layout_width="337dp"
+        android:layout_height="391dp"
         android:gravity="center"
-        android:text='- Ao falar o comando "adicionar alarme", o usuário será redirecionado para uma outra tela no próprio aplicativo, onde será requerido (por comando de voz) o horário,dias da semana e título desejados.
-                                             - Sucessivamente isso, o alarme será definido por meio de um click no botão, e será adicionado no aplicativo de relógio do Android.'
+        android:text='- Ao falar o comando "adicionar alarme", o usuário será redirecionado para uma outra tela no próprio aplicativo, onde será requerido (por comando de voz) o horário,dias da semana e título desejados.\n\n
+ - Após verificar as informações e clicar no botão, será adicionado o alarme.'
         android:textColor="#08B18F"
         android:textSize="22sp"
         app:fontFamily="@font/fredoka_one"

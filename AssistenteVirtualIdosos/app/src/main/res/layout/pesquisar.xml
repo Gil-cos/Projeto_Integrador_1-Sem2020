@@ -37,7 +37,7 @@
         android:layout_width="303dp"
         android:layout_height="244dp"
         android:gravity="center"
-        android:text=' - Ao falar o comando "pesquisar: (o que deseja ser pesquisado)", o Google será aberto com os resultados da pesquisa.'
+        android:text=' - Ao falar o comando "pesquisar" + "O que deseja ser pesquisado", o Google será aberto com os resultados da pesquisa.'
         android:textColor="#08B18F"
         android:textSize="24sp"
         app:fontFamily="@font/fredoka_one"
