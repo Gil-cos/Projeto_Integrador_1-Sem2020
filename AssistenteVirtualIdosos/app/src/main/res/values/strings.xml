@@ -14,6 +14,7 @@
     <string name="aqui_ser_adicionado_seu_t_tulo">Aqui será adicionado seu título</string>
     <string name="pesquisar"> PESQUISAR </string>
     <string name="sos"> SOS </string>
+    <string name="alarme"> ALARME </string>
     <string name="ligacao"> LIGACAO </string>
     <string name="contato"> CONTATO </string>
 </resources>

@@ -23,7 +23,7 @@
         android:id="@+id/Contato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/alarme"
+        android:text="Alarme"
         android:textSize="40sp"
         android:textColor="#034055"
         app:fontFamily="@font/fredoka_one"
