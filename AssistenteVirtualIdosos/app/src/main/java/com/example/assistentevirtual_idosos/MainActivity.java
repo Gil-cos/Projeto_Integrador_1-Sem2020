@@ -5,12 +5,10 @@ import android.bluetooth.BluetoothAdapter;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.LabeledIntent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.speech.RecognizerIntent;
 import android.support.v4.app.ActivityCompat;
@@ -84,27 +82,27 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        if (speech.toUpperCase().equals("TIRAR FOTO")) {
+        if (speech.toUpperCase().equals("ABRIR CÂMERA")) {
             openCamera();
             return;
         }
 
-        if (speech.toUpperCase().equals("ATIVAR BLUETOOTH")){
+        if (speech.toUpperCase().equals("LIGAR BLUETOOTH")){
             enableBluetooth();
             return;
         }
 
-        if (speech.toUpperCase().equals("DESATIVAR BLUETOOTH")){
+        if (speech.toUpperCase().equals("DESLIGAR BLUETOOTH")){
             disableBluetooth();
             return;
         }
 
-        if(speech.toUpperCase().equals("ATIVAR INTERNET")){
+        if(speech.toUpperCase().equals("LIGAR INTERNET")){
             enableWifi();
             return;
         }
 
-        if (speech.toUpperCase().equals("DESATIVAR INTERNET")) {
+        if (speech.toUpperCase().equals("DESLIGAR INTERNET")) {
             disableWifi();
             return;
         }
@@ -124,9 +122,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         else{
-            Toast.makeText(this, "Funcionalidade não existente, veja a lista de funções no ícone abaixo do microfone.", Toast.LENGTH_LONG).show();
-        }
+        Toast.makeText(this, "Funcionalidade não existente, veja a lista de funções no ícone abaixo do microfone.", Toast.LENGTH_LONG).show();
     }
+}
 
     private void callSOS() {
         //Método para ligar para Emergência
