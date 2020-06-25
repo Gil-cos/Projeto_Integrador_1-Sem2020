@@ -25,6 +25,8 @@
         android:layout_height="wrap_content"
         android:text="@string/alarme"
         android:textSize="40sp"
+        android:textColor="#035545"
+        app:fontFamily="@font/fredoka_one"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,11 +38,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Adicionar alarme"
+        android:textColor="#035545"
+        android:textSize="20sp"
+        app:fontFamily="@font/fredoka_one"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/microphone"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.9" />
 
     <EditText
         android:id="@+id/editText9"
@@ -81,7 +86,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Título"
-        android:textSize="15sp"
+        android:textSize="24sp"
+        android:textColor="#035545"
+        app:fontFamily="@font/fredoka_one"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editText9"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,7 +100,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dias da semana"
-        android:textSize="15sp"
+        android:textSize="24sp"
+        android:textColor="#035545"
+        app:fontFamily="@font/fredoka_one"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editText10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,18 +114,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Horário"
-        android:textSize="15sp"
+        android:textSize="24sp"
+        android:textColor="#035545"
+        app:fontFamily="@font/fredoka_one"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editText11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText10" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="391dp" />
 
 </android.support.constraint.ConstraintLayout>

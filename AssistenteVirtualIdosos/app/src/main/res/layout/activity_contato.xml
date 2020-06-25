@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     tools:context=".Contato">
+
     <ImageView
         android:id="@+id/mic"
-        android:layout_width="189dp"
-        android:layout_height="188dp"
+        android:layout_width="199dp"
+        android:layout_height="194dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,6 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CONTATOS"
+        android:textColor="#035545"
+        app:fontFamily="@font/fredoka_one"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,18 +34,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.060000002" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-
     <TextView
         android:id="@+id/nome_contato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nome"
+        android:textSize="24sp"
+        android:textColor="#035545"
+        app:fontFamily="@font/fredoka_one"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,6 +65,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Número"
+        android:textSize="24sp"
+        android:textColor="#035545"
+        app:fontFamily="@font/fredoka_one"
         app:layout_constraintBottom_toTopOf="@+id/adicionar_numero"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,10 +90,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Adicionar Contato"
+        android:textColor="#035545"
+        android:textSize="20sp"
+        app:fontFamily="@font/fredoka_one"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.914" />
 
 </android.support.constraint.ConstraintLayout>
