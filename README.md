@@ -40,7 +40,7 @@
 
 ## 4. Adicionar alarme
 
-### Descrição: Ao falar o comando "adicionar um alarme", o usuário será redirecionado para uma outra tela no próprio aplicativo, onde será requerido (por comando de voz) o horário,dias da semana e título desejados, após isso o alarme será definido por meio de um click no botão, e será adicionado no aplicativo de relógio do Android.
+### Descrição: Ao falar o comando "adicionar alarme", o usuário será redirecionado para uma outra tela no próprio aplicativo, onde será requerido (por comando de voz) o horário,dias da semana e título desejados, após isso o alarme será definido por meio de um click no botão, e será adicionado no aplicativo de relógio do Android.
 
 ## 5. Pesquisa na WEB
 

@@ -11,7 +11,7 @@
         android:id="@+id/imageView"
         android:layout_width="161dp"
         android:layout_height="168dp"
-        android:background="@drawable/ic_iconfinder_wifi_2639756"
+        android:background="@drawable/ic_iconfinder___medical_help_call_health_telephone_emergency_6124131"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Wifi"
+        android:text="S.O.S"
         android:textColor="#08B18F"
         android:textSize="45sp"
         app:fontFamily="@font/fredoka_one"
@@ -34,11 +34,10 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="313dp"
-        android:layout_height="252dp"
+        android:layout_width="328dp"
+        android:layout_height="313dp"
         android:gravity="center"
-        android:text='- Ao falar o comando "ligar internet", o Wi-Fi do celular será ativado.\n\n
-- Ao falar o comando "desligar internet", o Wi-Fi do celular será desativado.'
+        android:text='- Ao falar o comando "ajuda", será efetuada uma chamada para o número da emergência (192).'
         android:textColor="#08B18F"
         android:textSize="24sp"
         app:fontFamily="@font/fredoka_one"

@@ -38,7 +38,7 @@ public class Alarme extends AppCompatActivity {
         diasSemana = findViewById(R.id.editText10);
         horario = findViewById(R.id.editText11);
 
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.adicionar_alarme).setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -90,17 +90,17 @@ public class Alarme extends AppCompatActivity {
 
         if (speech.toUpperCase().contains("DIAS")) {
             valoresDias = speech.split(" ");
-            diasSemana.setText(valoresDias[1] + " " + valoresDias[2] + " " + valoresDias[3] + " " + valoresDias[4] + " " + valoresDias[5]);
+            String dias = "";
+            for (int i = 1; i < valoresDias.length; i++){
+                dias += valoresDias[i] + " ";
+            }
+            diasSemana.setText(dias);
             return;
 
         }else{
             Toast.makeText(this, "Informe um dia, horário e um título", Toast.LENGTH_LONG).show();
         }
-
-
-
     }
-
 
     private void createAlarm() {
         Map<String,Integer> map = new HashMap<>();
@@ -117,7 +117,6 @@ public class Alarme extends AppCompatActivity {
             days.add(map.get(valoresDias[i]));
         }
 
-
         array_hour = horario.getText().toString().split(":");
 
         Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM)
@@ -129,6 +128,7 @@ public class Alarme extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
     private void catchSpeech() {
 
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);

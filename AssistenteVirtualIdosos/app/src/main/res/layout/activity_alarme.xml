@@ -20,11 +20,13 @@
         tools:ignore="VectorDrawableCompat" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Contato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/alarme"
+        android:text="Alarme"
         android:textSize="40sp"
+        android:textColor="#034055"
+        app:fontFamily="@font/fredoka_one"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,15 +34,18 @@
         app:layout_constraintVertical_bias="0.060000002" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/adicionar_alarme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Adicionar alarme"
+        android:textColor="#022F3E"
+        android:textSize="20sp"
+        app:fontFamily="@font/fredoka_one"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/microphone"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.914" />
 
     <EditText
         android:id="@+id/editText9"
@@ -71,7 +76,7 @@
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/adicionar_alarme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText10" />
@@ -81,7 +86,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Título"
-        android:textSize="15sp"
+        android:textSize="24sp"
+        android:textColor="#022F3E"
+        app:fontFamily="@font/fredoka_one"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editText9"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,7 +100,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dias da semana"
-        android:textSize="15sp"
+        android:textSize="24sp"
+        android:textColor="#022F3E"
+        app:fontFamily="@font/fredoka_one"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editText10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,18 +114,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Horário"
-        android:textSize="15sp"
+        android:textSize="24sp"
+        android:textColor="#022F3E"
+        app:fontFamily="@font/fredoka_one"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editText11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText10" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
 
 </android.support.constraint.ConstraintLayout>
