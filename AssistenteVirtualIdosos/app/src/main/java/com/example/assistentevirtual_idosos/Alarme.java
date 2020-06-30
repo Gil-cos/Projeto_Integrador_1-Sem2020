@@ -35,16 +35,8 @@ public class Alarme extends AppCompatActivity {
         });
 
         titulo = findViewById(R.id.editText9);
-        diasSemana = findViewById(R.id.editText10);
-        horario = findViewById(R.id.editText11);
-
-        findViewById(R.id.adicionar_alarme).setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                createAlarm();
-            }
-      });
+        diasSemana = findViewById(R.id.editText11);
+        horario = findViewById(R.id.editText10);
     }
 
     @Override
@@ -76,9 +68,14 @@ public class Alarme extends AppCompatActivity {
     private void processMachineLearning(String speech) {
         String valores[];
 
+
         if (speech.toUpperCase().contains("TÍTULO")) {
             valores = speech.split(" ");
-            titulo.setText(valores[1]);
+            String title = "";
+            for (int i = 1;i < valores.length;i++){
+                title += valores[i] + " ";
+            }
+            titulo.setText(title);
             return;
         }
 
@@ -97,7 +94,12 @@ public class Alarme extends AppCompatActivity {
             diasSemana.setText(dias);
             return;
 
-        }else{
+        }
+        if (speech.toUpperCase().contains("ADICIONAR")){
+            createAlarm();
+            return;
+        }
+        else{
             Toast.makeText(this, "Informe um dia, horário e um título", Toast.LENGTH_LONG).show();
         }
     }
