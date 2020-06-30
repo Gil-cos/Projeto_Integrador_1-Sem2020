@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.icon3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), View_pager.class);
-                startActivity(intent);
+
+                catchSpeech();
             }
         });
 
@@ -75,6 +75,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void processMachineLearning(String speech) {
+
+
+        if (speech.toUpperCase().equals("FUNCIONALIDADES")){
+            openFunc();
+            return;
+        }
 
         if (speech.toUpperCase().equals("PESQUISAR")) {
             openURL();
@@ -149,6 +155,13 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(URL));
         Toast.makeText(this,"Abrindo Navegador",Toast.LENGTH_LONG).show();
+        startActivity(intent);
+    }
+
+
+    private void openFunc(){
+        // método para abertura de funcionalidades via comando de voz
+        Intent intent = new Intent(getApplicationContext(), View_pager.class);
         startActivity(intent);
     }
 
