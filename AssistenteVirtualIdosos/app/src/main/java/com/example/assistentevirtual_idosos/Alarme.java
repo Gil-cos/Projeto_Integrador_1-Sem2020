@@ -95,7 +95,7 @@ public class Alarme extends AppCompatActivity {
             createAlarm();
             return;
         }else{
-            Toast.makeText(this, "Informe um dia, horário e um título, caso queira editar as informações informe os comandos novamente", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Informe um dia, horário e título. Caso queira editar as informações informe os comandos novamente", Toast.LENGTH_LONG).show();
         }
     }
 

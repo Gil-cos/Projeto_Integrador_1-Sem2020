@@ -83,7 +83,7 @@ public class Contato extends AppCompatActivity {
            addContact();
            return;
         }else{
-            Toast.makeText(this, "Informações inválidas, diga um nome e um número válidos,\"Informe um dia, horário e um título, caso queira editar as informações informe os comandos novamente", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Informações inválidas, diga um nome e um número válidos. Caso queira editar as informações informe os comandos novamente.", Toast.LENGTH_LONG).show();
         }
     }
 
