@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                catchSpeech();
+                Intent intent = new Intent(getApplicationContext(), View_pager.class);
+                startActivity(intent);
             }
         });
 
