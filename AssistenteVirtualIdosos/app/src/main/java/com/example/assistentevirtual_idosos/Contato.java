@@ -31,13 +31,6 @@ public class Contato extends AppCompatActivity {
                 catchSpeech();
             }
         });
-
-        findViewById(R.id.adicionar_contato).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addContact();
-            }
-        });
     }
 
     @Override
@@ -68,7 +61,7 @@ public class Contato extends AppCompatActivity {
     private void processMachineLearning(String speech) {
         String valores[];
 
-        if (speech.toUpperCase().contains("NOME")) {
+        if(speech.toUpperCase().contains("NOME")) {
             valores = speech.split(" ");
             String nomes = "";
             for (int i = 1; i < valores.length; i++){
@@ -77,8 +70,7 @@ public class Contato extends AppCompatActivity {
             nome.setText(nomes);
             return;
         }
-
-        if (speech.toUpperCase().contains("NÚMERO")) {
+        if(speech.toUpperCase().contains("NÚMERO")) {
             valores = speech.split(" ");
             String numeros = "";
             for(int i = 1; i < valores.length; i++){
@@ -87,9 +79,11 @@ public class Contato extends AppCompatActivity {
             numero.setText(numeros);
             return;
         }
-
-        else{
-            Toast.makeText(this, "Informações inválidas, diga um nome e um número válidos.", Toast.LENGTH_LONG).show();
+        if(speech.toUpperCase().contains("ADICIONAR")){
+           addContact();
+           return;
+        }else{
+            Toast.makeText(this, "Informações inválidas, diga um nome e um número válidos,\"Informe um dia, horário e um título, caso queira editar as informações informe os comandos novamente", Toast.LENGTH_LONG).show();
         }
     }
 

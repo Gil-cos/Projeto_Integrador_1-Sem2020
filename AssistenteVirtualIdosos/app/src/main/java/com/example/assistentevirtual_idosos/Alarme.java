@@ -68,8 +68,7 @@ public class Alarme extends AppCompatActivity {
     private void processMachineLearning(String speech) {
         String valores[];
 
-
-        if (speech.toUpperCase().contains("TÍTULO")) {
+        if(speech.toUpperCase().contains("TÍTULO")) {
             valores = speech.split(" ");
             String title = "";
             for (int i = 1;i < valores.length;i++){
@@ -78,14 +77,12 @@ public class Alarme extends AppCompatActivity {
             titulo.setText(title);
             return;
         }
-
-        if (speech.toUpperCase().contains("HORÁRIO")) {
+        if(speech.toUpperCase().contains("HORÁRIO")) {
             valores = speech.split(" ");
             horario.setText(valores[1]);
             return;
         }
-
-        if (speech.toUpperCase().contains("DIAS")) {
+        if(speech.toUpperCase().contains("DIAS")) {
             valoresDias = speech.split(" ");
             String dias = "";
             for (int i = 1; i < valoresDias.length; i++){
@@ -93,14 +90,12 @@ public class Alarme extends AppCompatActivity {
             }
             diasSemana.setText(dias);
             return;
-
         }
-        if (speech.toUpperCase().contains("ADICIONAR")){
+        if(speech.toUpperCase().contains("ADICIONAR")){
             createAlarm();
             return;
-        }
-        else{
-            Toast.makeText(this, "Informe um dia, horário e um título", Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(this, "Informe um dia, horário e um título, caso queira editar as informações informe os comandos novamente", Toast.LENGTH_LONG).show();
         }
     }
 
