@@ -110,6 +110,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         android:focusable="false"/>
+    <TextView
+        android:id="@+id/adicionar_contato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Para adionar um alarme,\ndiga o comando 'Adicionar'.\nÁpos informar todos os campos exigidos"
+        android:textColor="#022F3E"
+        android:textSize="15sp"
+        app:fontFamily="@font/fredoka_one"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText11"/>
 
 
 </android.support.constraint.ConstraintLayout>

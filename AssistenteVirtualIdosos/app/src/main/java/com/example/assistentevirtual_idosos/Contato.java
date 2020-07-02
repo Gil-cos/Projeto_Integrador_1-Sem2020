@@ -80,8 +80,12 @@ public class Contato extends AppCompatActivity {
             return;
         }
         if(speech.toUpperCase().contains("ADICIONAR")){
-           addContact();
-           return;
+           if(nome.getText().length() == 0 || numero.getText().length() == 0){
+               Toast.makeText(this, "Informe os campos nome e número, e em seguida informe o comando 'adicionar'.", Toast.LENGTH_LONG).show();
+           }else{
+               addContact();
+               return;
+           }
         }else{
             Toast.makeText(this, "Informações inválidas, diga um nome e um número válidos. Caso queira editar as informações informe os comandos novamente.", Toast.LENGTH_LONG).show();
         }

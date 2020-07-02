@@ -92,8 +92,12 @@ public class Alarme extends AppCompatActivity {
             return;
         }
         if(speech.toUpperCase().contains("ADICIONAR")){
-            createAlarm();
-            return;
+            if (titulo.getText().length() == 0 || diasSemana.getText().length() == 0 || horario.getText().length() == 0){
+                Toast.makeText(this, "Informe os campos título,horário e dias da semana,e em seguida informe o comando 'adicionar'.", Toast.LENGTH_LONG).show();
+            }else {
+                createAlarm();
+                return;
+            }
         }else{
             Toast.makeText(this, "Informe um dia, horário e título. Caso queira editar as informações informe os comandos novamente", Toast.LENGTH_LONG).show();
         }
