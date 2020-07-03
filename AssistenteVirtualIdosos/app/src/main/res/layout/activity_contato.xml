@@ -39,6 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nome"
+        android:gravity="center"
         android:textColor="#022F3E"
         android:textSize="24sp"
         app:fontFamily="@font/fredoka_one"
@@ -93,14 +94,18 @@
         android:id="@+id/adicionar_contato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Para adionar o contato,\ndiga o comando 'Adicionar'.\nÁpos informar todos os campos exigidos"
+        android:layout_marginBottom="44dp"
+        android:gravity="center"
+        android:text="Para adicionar o contato,\nclique no microfone e diga o comando 'Adicionar',\napós informar todos os campos exigidos."
         android:textColor="#022F3E"
         android:textSize="15sp"
         app:fontFamily="@font/fredoka_one"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/adicionar_nome"/>
+        app:layout_constraintTop_toBottomOf="@+id/adicionar_nome"
+        app:layout_constraintVertical_bias="0.769" />
 
 
 </android.support.constraint.ConstraintLayout>
