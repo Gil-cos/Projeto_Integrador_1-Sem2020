@@ -15,7 +15,7 @@ public class HTTPService extends AsyncTask<Void, Void, Filme> {
     protected Filme doInBackground(Void... voids) {
         StringBuilder resposta = new StringBuilder();
         try {
-            URL url = new URL("https://topicos-avancados.herokuapp.com/getFilme/8");
+            URL url = new URL("https://r4u.herokuapp.com/getFilme/8");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setRequestProperty("Accept", "application/json");
