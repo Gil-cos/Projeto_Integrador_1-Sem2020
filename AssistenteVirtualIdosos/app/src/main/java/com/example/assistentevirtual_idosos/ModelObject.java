@@ -9,7 +9,8 @@ public enum ModelObject {
     SOS(R.string.sos, R.layout.sos),
     LIGACAO(R.string.ligacao, R.layout.ligacao),
     CONTATO(R.string.contato, R.layout.contato),
-    ALARME(R.string.alarme, R.layout.alarme);
+    ALARME(R.string.alarme, R.layout.alarme),
+    FILME(R.string.filme, R.layout.filme);
 
 
 

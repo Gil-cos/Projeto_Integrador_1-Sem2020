@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.icon3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(getApplicationContext(), View_pager.class);
                 startActivity(intent);
             }
@@ -75,6 +76,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void processMachineLearning(String speech) {
+
+
+        if (speech.toUpperCase().equals("FUNCIONALIDADES")){
+            openFunc();
+            return;
+        }
 
         if (speech.toUpperCase().equals("PESQUISAR")) {
             searchGoogle();
@@ -164,6 +171,13 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speak please");
         startActivity(intent);
         Toast.makeText(getApplicationContext(), "Reconhecimento de Voz para Pesquisa Aberto" +  "\n\nDiga sua Pesquisa", Toast.LENGTH_LONG).show();
+    }
+
+
+    private void openFunc(){
+        // método para abertura de funcionalidades via comando de voz
+        Intent intent = new Intent(getApplicationContext(), View_pager.class);
+        startActivity(intent);
     }
 
     private void enableBluetooth() {
