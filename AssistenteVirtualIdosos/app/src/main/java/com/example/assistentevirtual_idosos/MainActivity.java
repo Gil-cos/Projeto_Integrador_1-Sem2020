@@ -1,6 +1,7 @@
 package com.example.assistentevirtual_idosos;
 
 import android.Manifest;
+import android.app.SearchManager;
 import android.bluetooth.BluetoothAdapter;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -15,8 +16,11 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
+import com.example.assistentevirtual_idosos.model.Filme;
+import com.example.assistentevirtual_idosos.service.HTTPService;
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -120,6 +124,10 @@ public class MainActivity extends AppCompatActivity {
             addContact();
             return;
         }
+        if(speech.toUpperCase().equals("RECOMENDAR FILME")){
+            recommendMovie();
+            return;
+        }
 
         else{
         Toast.makeText(this, "Funcionalidade não existente, veja a lista de funções no ícone abaixo do microfone.", Toast.LENGTH_LONG).show();
@@ -207,6 +215,24 @@ public class MainActivity extends AppCompatActivity {
             }
             Toast.makeText(this, "Ligando para" + " " + phone[2], Toast.LENGTH_LONG).show();
             startActivity(intent);
+        }
+    }
+
+    private void recommendMovie(){
+        //Método para se recomendar o Filme
+        HTTPService service = new HTTPService();
+        try {
+            Filme retorno = service.execute().get();
+            Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+            intent.putExtra(SearchManager.QUERY, retorno.toString());
+            if (intent.resolveActivity(getPackageManager()) != null){
+                startActivity(intent);
+                Toast.makeText(this, "Abrindo pesquisa sobre o filme recomendado.", Toast.LENGTH_LONG).show();
+            }
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
