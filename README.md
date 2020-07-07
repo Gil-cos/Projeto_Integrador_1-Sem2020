@@ -40,7 +40,7 @@
 
 ## 4. Adicionar alarme
 
-### Descrição: Ao falar o comando "adicionar alarme", o usuário será redirecionado para uma outra tela no próprio aplicativo, onde será requerido (por comando de voz) o horário,dias da semana e título desejados, após isso o alarme será definido por meio de um click no botão, e será adicionado no aplicativo de relógio do Android.
+### Descrição: Ao falar o comando "adicionar alarme", o usuário será redirecionado para uma outra tela no próprio aplicativo, onde será requerido (por comando de voz) o horário,dias da semana e título desejados, após isso o alarme será definido por meio de um comando de voz, e será adicionado no aplicativo de relógio do Android.
 
 ## 5. Pesquisa na WEB
 
@@ -51,11 +51,18 @@
 
 ## 6. Adicionar Contato
 
-### Descrição: Ao falar o comando "adicionar contato", o usuário será redirecionado para uma outra tela no próprio aplicativo, onde será requerido (por comando de voz) o nome e número desejados, após isso será redirecionado para o aplicativo de contatos do Android por meio de um click no botão, e depois de salvar o contato, ele será cadastrado.
+### Descrição: Ao falar o comando "adicionar contato", o usuário será redirecionado para uma outra tela no próprio aplicativo, onde será requerido (por comando de voz) o nome e número desejados, após isso será redirecionado para o aplicativo de contatos do Android por meio de um comando de voz, e depois de salvar o contato, ele será cadastrado.
 
 ## 7. Fazer Ligações
 
 ### Descrição: Ao falar o comando "ligar para '+ número desejado'" o aplicativo redireciona o usuário para a tela de ligações padrão do Android, onde será iniciado uma chamada para o número requerido pelo usuário.
+
+
+# Sprint 6:
+
+## 8. API de Filmes
+
+### Descrição: Ao falar o comando "recomendar filme", o usuário será redirecionado para uma tela de pesquisa do Google, contendo os resultados relacionados ao filme indicado. A API foi densenvolvida pelo Sexto Semestre, possui uma inteligencia artificial (IA) que tem por objetivo a recomendação de um filme para o usuário.
 
 
 # Entregas:
