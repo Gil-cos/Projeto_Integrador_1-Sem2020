@@ -13,9 +13,9 @@
 
 ## Descrição: Aplicação Mobile voltada para facilitar o uso de smartphones para usuários da terceira idade.
 
-<div style="text-align: justify"> ## Ferramentas Utilizadas: A aplicação está sendo desenvolvida através de um Ambiente de desenvolvimento integrado (IDE) chamada Android Studio, no qual seu frontend está em XML e seu backend em JAVA. </div
+##<div style="text-align: justify">Ferramentas Utilizadas: A aplicação está sendo desenvolvida através de um Ambiente de desenvolvimento integrado (IDE) chamada Android Studio, no qual seu frontend está em XML e seu backend em JAVA. </div
 
-<div style="text-align: justify"> ## Funcionamento do Aplicativo: Após o aplicativo ser instalado pelo usuário em seu smartphone, ao clicar em seu ícone será aberta a tela inicial contendo um microfone como botão e um ícone de visualização de lista. Ao clicar no microfone, será gerado a tela de reconhecimento de voz da Google que irá captar o comando falado pelo usuário, acionando uma das funcionalidades. O ícone de visualização de lista, quando clicado, tem a função de mostrar as funcionalidades disponíveis para o usuário por meio de uma nova tela no aplicativo.</div>
+## <div style="text-align: justify">Funcionamento do Aplicativo: Após o aplicativo ser instalado pelo usuário em seu smartphone, ao clicar em seu ícone será aberta a tela inicial contendo um microfone como botão e um ícone de visualização de lista. Ao clicar no microfone, será gerado a tela de reconhecimento de voz da Google que irá captar o comando falado pelo usuário, acionando uma das funcionalidades. O ícone de visualização de lista, quando clicado, tem a função de mostrar as funcionalidades disponíveis para o usuário por meio de uma nova tela no aplicativo.</div>
 
 
 # Sprint 3: 
