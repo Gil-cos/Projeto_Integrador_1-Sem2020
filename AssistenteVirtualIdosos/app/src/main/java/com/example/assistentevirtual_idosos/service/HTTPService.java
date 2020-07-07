@@ -24,7 +24,7 @@ public class HTTPService extends AsyncTask<Void, Void, Filme> {
 
             Scanner scanner = new Scanner(url.openStream());
             while (scanner.hasNext()){
-                resposta.append(scanner.nextline());
+                resposta.append(scanner.nextLine());
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();
