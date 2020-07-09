@@ -35,16 +35,8 @@ public class Alarme extends AppCompatActivity {
         });
 
         titulo = findViewById(R.id.editText9);
-        diasSemana = findViewById(R.id.editText10);
-        horario = findViewById(R.id.editText11);
-
-        findViewById(R.id.adicionar_alarme).setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                createAlarm();
-            }
-      });
+        diasSemana = findViewById(R.id.editText11);
+        horario = findViewById(R.id.editText10);
     }
 
     @Override
@@ -76,19 +68,21 @@ public class Alarme extends AppCompatActivity {
     private void processMachineLearning(String speech) {
         String valores[];
 
-        if (speech.toUpperCase().contains("TÍTULO")) {
+        if(speech.toUpperCase().contains("TÍTULO")) {
             valores = speech.split(" ");
-            titulo.setText(valores[1]);
+            String title = "";
+            for (int i = 1;i < valores.length;i++){
+                title += valores[i] + " ";
+            }
+            titulo.setText(title);
             return;
         }
-
-        if (speech.toUpperCase().contains("HORÁRIO")) {
+        if(speech.toUpperCase().contains("HORÁRIO")) {
             valores = speech.split(" ");
             horario.setText(valores[1]);
             return;
         }
-
-        if (speech.toUpperCase().contains("DIAS")) {
+        if(speech.toUpperCase().contains("DIAS")) {
             valoresDias = speech.split(" ");
             String dias = "";
             for (int i = 1; i < valoresDias.length; i++){
@@ -96,9 +90,16 @@ public class Alarme extends AppCompatActivity {
             }
             diasSemana.setText(dias);
             return;
-
+        }
+        if(speech.toUpperCase().contains("ADICIONAR")){
+            if (titulo.getText().length() == 0 || diasSemana.getText().length() == 0 || horario.getText().length() == 0){
+                Toast.makeText(this, "Informe os campos título,horário e dias da semana,e em seguida informe o comando 'adicionar'.", Toast.LENGTH_LONG).show();
+            }else {
+                createAlarm();
+                return;
+            }
         }else{
-            Toast.makeText(this, "Informe um dia, horário e um título", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Informe um dia, horário e título. Caso queira editar as informações informe os comandos novamente", Toast.LENGTH_LONG).show();
         }
     }
 

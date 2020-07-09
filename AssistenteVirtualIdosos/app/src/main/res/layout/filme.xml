@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,9 +8,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="161dp"
-        android:layout_height="168dp"
-        android:background="@drawable/ic_iconfinder_contat_us_10_add_contact_4211837"
+        android:layout_width="196dp"
+        android:layout_height="199dp"
+        android:background="@drawable/ic_iconfinder_cinema_103271"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Contato"
+        android:text="Filmes"
         android:textColor="#08B18F"
         android:textSize="45sp"
         app:fontFamily="@font/fredoka_one"
@@ -34,13 +33,12 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="337dp"
-        android:layout_height="401dp"
+        android:layout_width="271dp"
+        android:layout_height="266dp"
         android:gravity="center"
-        android:text='- Ao falar o comando "adicionar contato", o usuário será redirecionado para uma outra tela no próprio aplicativo, onde será requerido (por comando de voz) o nome e número desejados.\n\n
- - Após verificar as informações e dizer "adicionar", será adicionado o contato.'
+        android:text=' - Ao falar o comando "recomendar filme", o aplicativo será direcionado a tela do navegador em procura da sugestão de filme.'
         android:textColor="#08B18F"
-        android:textSize="22sp"
+        android:textSize="24sp"
         app:fontFamily="@font/fredoka_one"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,5 +46,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.327" />
+
 
 </android.support.constraint.ConstraintLayout>
