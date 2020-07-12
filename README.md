@@ -2,12 +2,12 @@
 
 ## Integrantes:
 
-### - Gabriel Henrique de Souza Ferraz
-### - Gabriel Timóteo dos Santos
-### - Gabriel Soares Gonçalves
-### - Gilberto Costa Junior
-### - Hugo Wagner da Silva Gomes dos Santos
-### - Victor Citro Velozo
+### - Gabriel Henrique de Souza Ferraz - [LinkedIn](https://www.linkedin.com/in/gabriel-henrique-de-souza-ferraz-4873581b2/)
+### - Gabriel Timóteo dos Santos - [LinkedIn](https://www.linkedin.com/in/gabriel-santos-2563571b2/)
+### - Gabriel Soares Gonçalves - [LinkedIn](https://www.linkedin.com/in/gabriel-soares-gon%C3%A7alves-a2b35a1b2/)
+### - Gilberto Costa Junior - [LinkedIn](https://www.linkedin.com/in/gilberto-costa-b8b988161/)
+### - Hugo Wagner da Silva Gomes dos Santos - [LinkedIn](http://linkedin.com/in/hugo-wagner-692b83150)
+### - Victor Citro Velozo - [LinkedIn](https://www.linkedin.com/in/victor-citro-b568a1145)
 
 # Tema: Assistente Virtual para Idosos
 
@@ -63,3 +63,6 @@
 ## - [Entrega 03](https://www.youtube.com/watch?v=Q-cQ-0FwXa8&feature=youtu.be)
 ## - [Entrega 04](https://www.youtube.com/watch?v=hfChLMHEkik&feature=youtu.be)
 ## - [Entrega 05](https://www.youtube.com/watch?v=bGK99DV4xbQ&feature=youtu.be)
+##
+## - [Entrega Final (Youtube)](https://www.youtube.com/watch?v=nkVoKSRvNu0&feature=youtu.be)
+## - [Entrega Final (Drive)](https://drive.google.com/drive/folders/1rH8oPEg0_wVbJaiNJUb8gtYHgcDuYScc?usp=sharing)
